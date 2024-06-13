@@ -1,0 +1,35 @@
+Subject : List of things needed for the project
+
+Good morning,
+
+Here is the list of the things I would need from amazon :
+
+- 3 raspberry pi Pico microcontrollers : https://www.amazon.com/gp/product/B0861WJ2DD/ref=ox_sc_act_title_7?smid=A26TCVWBQE4D9T&psc=1
+- spare motor drivers (I will continue with the same drivers) : https://www.amazon.com/gp/product/B0C5JCF5RS/ref=ox_sc_act_title_8?smid=A2RFXKS6GNXFWP&psc=1
+- Various supplies and tools : 
+    - https://www.amazon.com/gp/product/B07WWWPR2X/ref=ox_sc_act_title_9?smid=A2Z49KHVV4P4WN&th=1
+    - https://www.amazon.com/gp/product/B089CW7YSR/ref=ox_sc_act_title_6?smid=AMHYOXF0C8EDF&th=1
+    - https://www.amazon.com/gp/product/B09T6SJBV5/ref=ox_sc_act_title_5?smid=A1PKC2PUMNR8VD&th=1
+    - https://www.amazon.com/gp/product/B0812TYT5L/ref=ox_sc_act_title_4?smid=A1ZRRCZIF57JQ9&th=1
+    - https://www.amazon.com/gp/product/B085VMP7PB/ref=ox_sc_act_title_3?smid=A2WQHRXT5HY1G4&th=1
+    - https://www.amazon.com/gp/product/B08TVMRFV8/ref=ox_sc_act_title_2?smid=A3QR7MJ9FCPSP7&th=1
+
+If you don't find the 2D lidar you were mentioning, here is an inexpensive one I have experience with : https://www.amazon.com/gp/product/B0B1QCV4XR/ref=ox_sc_act_title_1?smid=AIJ7WJJN4HG6E&psc=1
+
+As for the 3D printer I was recommending here it is :
+- https://us.store.bambulab.com/products/p1s?variant=42153262743688
+Their website also have PLA, PETG and ABS Filament available for a reasonable price.
+
+
+As for the lack of encoders on the motors currently present on the platform, after some testing I found that the motors lack torque at low speed, which might make control harder. Having encoders would allow for a more precise control of the motors and would allow for more advanced control algorithms to be implemented. I have not yet found substitute motors with encoders that would fit the platform.
+
+
+
+------------------
+DC motor with lower RPMs
+https://www.amazon.com/Reduction-Eccentric-Gearbox-Diameter-Electric/dp/B09QPVJ3NZ/ref=sr_1_4?crid=ETXWOLGJRATQ&dib=eyJ2IjoiMSJ9.DtTlG5RIQHifj9ZcYGi1R0TJdLev3CqrijE5kPpHjCs8pTdbXrswoo87CytxHlk8aWqv7oLs8lH2BoAaHMuSBBBNZ49UkURr2zEpL0sc4L6R_Q7kceqUNG_6sqCvZN-I48gKUM-_9MIPBR4UEMqnJbEdV3UEuvK3WqYzJtO7qKLcLcZRL3k91yPxOZ19LwN28ELvBbJvRfKDyZNBUApf5rzNkIoECPPiaX6BFHBLN8ue9916iTcTiRfJb3Wq6YHWdLrvXjUz5PXDRM08j3Bcm9eDIYbL2hjhaqB6IbhJMKo.ZMt8Uy_DfY4FyOAoPBndj2gOOJIdGu53gj2yymkHCRY&dib_tag=se&keywords=555%2Bdc%2Bmotor&qid=1718121842&s=industrial&sprefix=555%2Bdc%2Bmoto%2Cindustrial%2C133&sr=1-4&th=1
+
+
+Maybe just replacement motors : 
+https://www.robotshop.com/products/555-size-dc-motor-with-encoder-24v-16000-rpm?srsltid=AfmBOorKwYGauKf66Fq4lzir2tv_MUM1RlLm37Xz9km3gYb0R1oQuWjK-Kg
+https://www.robotshop.com/products/555-size-dc-motor-with-encoder-6v-3900-rpm?pr_prod_strat=e5_desc&pr_rec_id=3db1b9894&pr_rec_pid=7487507693729&pr_ref_pid=7487493275809&pr_seq=uniform
