@@ -1,0 +1,1 @@
+/home/vincent/pfe/open-manipulator/build/open_manipulator_msgs/ament_cmake_environment_hooks/pythonpath.sh

@@ -1,0 +1,4 @@
+source;share/open-manipulator-moveit/local_setup.bash
+source;share/open-manipulator-moveit/local_setup.dsv
+source;share/open-manipulator-moveit/local_setup.sh
+source;share/open-manipulator-moveit/local_setup.zsh

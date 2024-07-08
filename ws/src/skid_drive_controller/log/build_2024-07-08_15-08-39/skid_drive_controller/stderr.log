@@ -1,0 +1,37 @@
+[31mCMake Error at /opt/ros/humble/share/ament_cmake_gmock/cmake/ament_add_gmock.cmake:69 (add_executable):
+  Cannot find source file:
+
+    test/test_skid_drive_controller.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+Call Stack (most recent call first):
+  /opt/ros/humble/share/ament_cmake_gmock/cmake/ament_add_gmock.cmake:52 (_ament_add_gmock)
+  CMakeLists.txt:55 (ament_add_gmock)
+
+[0m
+[31mCMake Error at /opt/ros/humble/share/generate_parameter_library/cmake/generate_parameter_library.cmake:154 (add_executable):
+  Cannot find source file:
+
+    test/test_load_skid_drive_controller.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+Call Stack (most recent call first):
+  CMakeLists.txt:71 (add_rostest_with_parameters_gmock)
+
+[0m
+[31mCMake Error at /opt/ros/humble/share/ament_cmake_gmock/cmake/ament_add_gmock.cmake:69 (add_executable):
+  No SOURCES given to target: test_skid_drive_controller
+Call Stack (most recent call first):
+  /opt/ros/humble/share/ament_cmake_gmock/cmake/ament_add_gmock.cmake:52 (_ament_add_gmock)
+  CMakeLists.txt:55 (ament_add_gmock)
+
+[0m
+[31mCMake Error at /opt/ros/humble/share/generate_parameter_library/cmake/generate_parameter_library.cmake:154 (add_executable):
+  No SOURCES given to target: test_load_skid_drive_controller
+Call Stack (most recent call first):
+  CMakeLists.txt:71 (add_rostest_with_parameters_gmock)
+
+[0m
+[0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m

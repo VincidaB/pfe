@@ -1,0 +1,1 @@
+/home/vincent/pfe/open-manipulator/build/open-manipulator-moveit/ament_cmake_environment_hooks/local_setup.bash

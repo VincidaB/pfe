@@ -1,0 +1,1 @@
+/home/vincent/pfe/open-manipulator/open-manipulator-moveit/launch/setup_assistant.launch.py

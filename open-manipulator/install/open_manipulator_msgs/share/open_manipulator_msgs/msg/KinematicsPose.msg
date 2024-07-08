@@ -1,0 +1,1 @@
+/home/vincent/pfe/open-manipulator/open_manipulator_msgs/msg/KinematicsPose.msg

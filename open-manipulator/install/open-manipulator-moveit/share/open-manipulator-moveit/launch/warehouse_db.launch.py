@@ -1,0 +1,1 @@
+/home/vincent/pfe/open-manipulator/open-manipulator-moveit/launch/warehouse_db.launch.py

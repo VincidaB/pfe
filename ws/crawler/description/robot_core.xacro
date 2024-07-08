@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <link name="base_link">
+
+    </link>
+
+    <joint name="joint_chassis" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="chassis"/>
+    </joint>
+
+
+    <link name="chassis">
+        <visual>
+            <origin xyz="0 0 -0.025" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://crawler/meshes/chassis.dae" scale="1 1 1" />
+            </geometry>
+            <material name="Gray">
+                <color rgba="0.5 0.5 0.5 1.0"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="joint_front_left_wheel" type="continuous">
+        <origin xyz="0.19 -0.2 0" rpy="0 0 0"/>
+        <parent link="chassis"/>
+        <child link="front_left_wheel"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="joint_center_left_wheel" type="continuous">
+        <origin xyz="0.19 0 0" rpy="0 0 0"/>
+        <parent link="chassis"/>
+        <child link="center_left_wheel"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="joint_back_left_wheel" type="continuous">
+        <origin xyz="0.19 0.2 0" rpy="0 0 0"/>
+        <parent link="chassis"/>
+        <child link="back_left_wheel"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <link name="front_left_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 ${3.141/2} 0"/>
+            <geometry>
+                <cylinder radius="0.0625" length="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="center_left_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 ${3.141/2} 0"/>
+            <geometry>
+                <cylinder radius="0.0625" length="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="back_left_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 ${3.141/2} 0"/>
+            <geometry>
+                <cylinder radius="0.0625" length="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="joint_front_right_wheel" type="continuous">
+        <origin xyz="-0.19 -0.2 0" rpy="0 0 0"/>
+        <parent link="chassis"/>
+        <child link="front_right_wheel"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="joint_center_right_wheel" type="continuous">
+        <origin xyz="-0.19 0 0" rpy="0 0 0"/>
+        <parent link="chassis"/>
+        <child link="center_right_wheel"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="joint_back_right_wheel" type="continuous">
+        <origin xyz="-0.19 0.2 0" rpy="0 0 0"/>
+        <parent link="chassis"/>
+        <child link="back_right_wheel"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <link name="front_right_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 ${3.141/2} 0"/>
+            <geometry>
+                <cylinder radius="0.0625" length="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="center_right_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 ${3.141/2} 0"/>
+            <geometry>
+                <cylinder radius="0.0625" length="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="back_right_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 ${3.141/2} 0"/>
+            <geometry>
+                <cylinder radius="0.0625" length="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    
+
+</robot>

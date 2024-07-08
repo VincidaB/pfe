@@ -1,0 +1,1 @@
+/home/vincent/pfe/open-manipulator/robotis_manipulator/include/robotis_manipulator/robotis_manipulator_trajectory_generator.h

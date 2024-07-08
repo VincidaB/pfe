@@ -1,0 +1,48 @@
+[0.010s] Invoking command in '/home/vincent/pfe/ws/src/skid_drive_controller/build/skid_drive_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/vincent/pfe/ws/src/skid_drive_controller -DCMAKE_INSTALL_PREFIX=/home/vincent/pfe/ws/src/skid_drive_controller/install/skid_drive_controller
+[0.020s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.116s] -- Found backward_ros: 1.0.2 (/opt/ros/humble/share/backward_ros/cmake)
+[0.130s] -- Could NOT find libbfd (missing: LIBBFD_LIBRARY LIBBFD_INCLUDE_DIR) 
+[0.131s] -- BACKWARD_HAS_UNWIND=1
+[0.131s] -- BACKWARD_HAS_BACKTRACE=0
+[0.131s] -- BACKWARD_HAS_BACKTRACE_SYMBOL=0
+[0.131s] -- BACKWARD_HAS_DW=1
+[0.131s] -- BACKWARD_HAS_BFD=0
+[0.131s] -- Found Backward: /opt/ros/humble/share/backward_ros/cmake  
+[0.131s] -- Found controller_interface: 2.41.0 (/opt/ros/humble/share/controller_interface/cmake)
+[0.148s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.150s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.154s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.162s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.173s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.616s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.617s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.639s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.647s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.663s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.671s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.681s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.863s] -- Found generate_parameter_library: 0.3.8 (/opt/ros/humble/share/generate_parameter_library/cmake)
+[0.863s] -- Found parameter_traits: 0.3.8 (/opt/ros/humble/share/parameter_traits/cmake)
+[0.873s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.931s] -- Found realtime_tools: 2.5.0 (/opt/ros/humble/share/realtime_tools/cmake)
+[0.957s] -- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+[0.962s] -- Found tf2_msgs: 0.25.7 (/opt/ros/humble/share/tf2_msgs/cmake)
+[1.257s] -- Configuring done
+[1.283s] -- Generating done
+[1.284s] -- Build files have been written to: /home/vincent/pfe/ws/src/skid_drive_controller/build/skid_drive_controller
+[1.294s] Invoked command in '/home/vincent/pfe/ws/src/skid_drive_controller/build/skid_drive_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/vincent/pfe/ws/src/skid_drive_controller -DCMAKE_INSTALL_PREFIX=/home/vincent/pfe/ws/src/skid_drive_controller/install/skid_drive_controller
+[1.296s] Invoking command in '/home/vincent/pfe/ws/src/skid_drive_controller/build/skid_drive_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vincent/pfe/ws/src/skid_drive_controller/build/skid_drive_controller -- -j16 -l16
+[1.349s] [ 20%] [34m[1mRunning `/opt/ros/humble/bin/generate_parameter_library_cpp /home/vincent/pfe/ws/src/skid_drive_controller/build/skid_drive_controller/skid_drive_controller_parameters/include//skid_drive_controller_parameters.hpp /home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller_parameter.yaml `[0m
+[1.941s] [ 20%] Built target skid_drive_controller_parameters
+[1.964s] [ 80%] [32mBuilding CXX object CMakeFiles/skid_drive_controller.dir/src/odometry.cpp.o[0m
+[1.964s] [ 80%] [32mBuilding CXX object CMakeFiles/skid_drive_controller.dir/src/speed_limiter.cpp.o[0m
+[1.964s] [ 80%] [32mBuilding CXX object CMakeFiles/skid_drive_controller.dir/src/skid_drive_controller.cpp.o[0m
+[2.068s] [01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:25:10:[m[K [01;31m[Kfatal error: [m[Kskid_drive_controller/skid_drive_controller.hpp: No such file or directory
+[2.068s]    25 | #include [01;31m[K"skid_drive_controller/skid_drive_controller.hpp"[m[K
+[2.068s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.068s] compilation terminated.
+[2.071s] gmake[2]: *** [CMakeFiles/skid_drive_controller.dir/build.make:76: CMakeFiles/skid_drive_controller.dir/src/skid_drive_controller.cpp.o] Error 1
+[2.071s] gmake[2]: *** Waiting for unfinished jobs....
+[2.582s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/skid_drive_controller.dir/all] Error 2
+[2.582s] gmake: *** [Makefile:146: all] Error 2
+[2.585s] Invoked command in '/home/vincent/pfe/ws/src/skid_drive_controller/build/skid_drive_controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vincent/pfe/ws/src/skid_drive_controller/build/skid_drive_controller -- -j16 -l16

@@ -1,0 +1,127 @@
+[0.000000] (-) TimerEvent: {}
+[0.000407] (skid_drive_controller) JobQueued: {'identifier': 'skid_drive_controller', 'dependencies': OrderedDict()}
+[0.000625] (skid_drive_controller) JobStarted: {'identifier': 'skid_drive_controller'}
+[0.008803] (skid_drive_controller) JobProgress: {'identifier': 'skid_drive_controller', 'progress': 'cmake'}
+[0.009041] (skid_drive_controller) Command: {'cmd': ['/usr/bin/cmake', '/home/vincent/pfe/ws/src/skid_drive_controller', '-DCMAKE_INSTALL_PREFIX=/home/vincent/pfe/ws/src/skid_drive_controller/install/skid_drive_controller'], 'cwd': '/home/vincent/pfe/ws/src/skid_drive_controller/build/skid_drive_controller', 'env': OrderedDict([('PROFILEHOME', ''), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('KDE_FULL_SESSION', 'true'), ('ISAACSIM_SKIP_WARMUP', 'Y'), ('LANGUAGE', ''), ('USER', 'vincent'), ('PAM_KWALLET5_LOGIN', '/run/user/1000/kwallet5.socket'), ('QT_SCREEN_SCALE_FACTORS', 'HDMI-0=1;DP-0=1;eDP-1-0=1;DisplayPort-1-0=1;DisplayPort-1-1=1;DisplayPort-1-2=1;DisplayPort-1-3=1;DisplayPort-1-4=1;DisplayPort-1-5=1;DisplayPort-1-6=1;DisplayPort-1-7=1;'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1732'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('XCURSOR_SIZE', '24'), ('KONSOLE_VERSION', '211203'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vincent/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vincent'), ('KDE_APPLICATIONS_AS_SCOPE', '1'), ('OLDPWD', '/home/vincent/pfe/ws/src'), ('DESKTOP_SESSION', 'plasma'), ('ROS_PYTHON_VERSION', '3'), ('SHELL_SESSION_ID', '9e0cc5add1ba4b89bf19ab339606631b'), ('GTK_RC_FILES', '/etc/gtk/gtkrc:/home/vincent/.gtkrc:/home/vincent/.config/gtkrc'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('KDE_SESSION_VERSION', '5'), ('KONSOLE_DBUS_SESSION', '/Sessions/1'), ('SYSTEMD_EXEC_PID', '1654'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('KONSOLE_DBUS_WINDOW', '/Windows/1'), ('MANDATORY_PATH', '/usr/share/gconf/plasma.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/vincent/ros2_ws/install'), ('INFOPATH', '/usr/local/texlive/2021/texmf-dist/doc/info:'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vincent'), ('WINDOWID', '106954759'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/plasma.default.path'), ('COLORFGBG', '15;0'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('GTK2_RC_FILES', '/etc/gtk-2.0/gtkrc:/home/vincent/.gtkrc-2.0:/home/vincent/.config/gtkrc-2.0'), ('PATH', '/usr/local/texlive/2021/bin/x86_64-linux:/opt/ros/humble/bin:/home/vincent/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XCURSOR_THEME', 'breeze_cursors'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'KDE'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'KDE'), ('XAUTHORITY', '/home/vincent/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXq8NdNe/agent.1671'), ('AMENT_PREFIX_PATH', '/home/vincent/ros2_ws/install/zed_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('KONSOLE_DBUS_SERVICE', ':1.89'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '1'), ('PWD', '/home/vincent/pfe/ws/src/skid_drive_controller/build/skid_drive_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/home/vincent/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vincent/ros2_ws/install/zed_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('KDE_SESSION_UID', '1000'), ('COLCON', '1'), ('MANPATH', '/usr/local/texlive/2021/texmf-dist/doc/man:'), ('CMAKE_PREFIX_PATH', '/home/vincent/ros2_ws/install/zed_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.072288] (skid_drive_controller) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.079340] (skid_drive_controller) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.099058] (-) TimerEvent: {}
+[0.159301] (skid_drive_controller) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.164424] (skid_drive_controller) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.164707] (skid_drive_controller) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.164940] (skid_drive_controller) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.167655] (skid_drive_controller) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199185] (-) TimerEvent: {}
+[0.291231] (skid_drive_controller) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.299594] (-) TimerEvent: {}
+[0.366763] (skid_drive_controller) StdoutLine: {'line': b'-- Found backward_ros: 1.0.2 (/opt/ros/humble/share/backward_ros/cmake)\n'}
+[0.377546] (skid_drive_controller) StdoutLine: {'line': b'-- Found libdw: /usr/lib/x86_64-linux-gnu/libdw.so  \n'}
+[0.383750] (skid_drive_controller) StdoutLine: {'line': b'-- Could NOT find libbfd (missing: LIBBFD_LIBRARY LIBBFD_INCLUDE_DIR) \n'}
+[0.383994] (skid_drive_controller) StdoutLine: {'line': b'-- BACKWARD_HAS_UNWIND=1\n'}
+[0.384113] (skid_drive_controller) StdoutLine: {'line': b'-- BACKWARD_HAS_BACKTRACE=0\n'}
+[0.384214] (skid_drive_controller) StdoutLine: {'line': b'-- BACKWARD_HAS_BACKTRACE_SYMBOL=0\n'}
+[0.384367] (skid_drive_controller) StdoutLine: {'line': b'-- BACKWARD_HAS_DW=1\n'}
+[0.384468] (skid_drive_controller) StdoutLine: {'line': b'-- BACKWARD_HAS_BFD=0\n'}
+[0.384551] (skid_drive_controller) StdoutLine: {'line': b'-- Found Backward: /opt/ros/humble/share/backward_ros/cmake  \n'}
+[0.386389] (skid_drive_controller) StdoutLine: {'line': b'-- Found controller_interface: 2.41.0 (/opt/ros/humble/share/controller_interface/cmake)\n'}
+[0.399717] (-) TimerEvent: {}
+[0.421055] (skid_drive_controller) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.425978] (skid_drive_controller) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.433406] (skid_drive_controller) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.444370] (skid_drive_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.460503] (skid_drive_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.499842] (-) TimerEvent: {}
+[0.600214] (-) TimerEvent: {}
+[0.700586] (-) TimerEvent: {}
+[0.800959] (-) TimerEvent: {}
+[0.901329] (-) TimerEvent: {}
+[0.950051] (skid_drive_controller) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.952488] (skid_drive_controller) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.982139] (skid_drive_controller) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.001453] (-) TimerEvent: {}
+[1.048709] (skid_drive_controller) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.050422] (skid_drive_controller) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.062038] (skid_drive_controller) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.068966] (skid_drive_controller) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.076784] (skid_drive_controller) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.086742] (skid_drive_controller) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.096463] (skid_drive_controller) StdoutLine: {'line': b'-- Looking for C++ include pthread.h\n'}
+[1.101497] (-) TimerEvent: {}
+[1.201816] (-) TimerEvent: {}
+[1.202164] (skid_drive_controller) StdoutLine: {'line': b'-- Looking for C++ include pthread.h - found\n'}
+[1.202492] (skid_drive_controller) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.301951] (-) TimerEvent: {}
+[1.305933] (skid_drive_controller) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.306776] (skid_drive_controller) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.402083] (-) TimerEvent: {}
+[1.492641] (skid_drive_controller) StdoutLine: {'line': b'-- Found generate_parameter_library: 0.3.8 (/opt/ros/humble/share/generate_parameter_library/cmake)\n'}
+[1.494648] (skid_drive_controller) StdoutLine: {'line': b'-- Found parameter_traits: 0.3.8 (/opt/ros/humble/share/parameter_traits/cmake)\n'}
+[1.502184] (-) TimerEvent: {}
+[1.517966] (skid_drive_controller) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[1.577474] (skid_drive_controller) StdoutLine: {'line': b'-- Found realtime_tools: 2.5.0 (/opt/ros/humble/share/realtime_tools/cmake)\n'}
+[1.602313] (-) TimerEvent: {}
+[1.613579] (skid_drive_controller) StdoutLine: {'line': b'-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.621589] (skid_drive_controller) StdoutLine: {'line': b'-- Found tf2_msgs: 0.25.7 (/opt/ros/humble/share/tf2_msgs/cmake)\n'}
+[1.702448] (-) TimerEvent: {}
+[1.802816] (-) TimerEvent: {}
+[1.865688] (skid_drive_controller) StdoutLine: {'line': b'-- Found ament_cmake_gmock: 1.3.9 (/opt/ros/humble/share/ament_cmake_gmock/cmake)\n'}
+[1.867662] (skid_drive_controller) StdoutLine: {'line': b'-- Found controller_manager: 2.41.0 (/opt/ros/humble/share/controller_manager/cmake)\n'}
+[1.902914] (-) TimerEvent: {}
+[2.003232] (-) TimerEvent: {}
+[2.062225] (skid_drive_controller) StdoutLine: {'line': b'-- Found ros2_control_test_assets: 2.41.0 (/opt/ros/humble/share/ros2_control_test_assets/cmake)\n'}
+[2.064594] (skid_drive_controller) StdoutLine: {'line': b"-- Found gmock sources under '/opt/ros/humble/src/gmock_vendor': C++ tests using 'Google Mock' will be built\n"}
+[2.102578] (skid_drive_controller) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[2.103339] (-) TimerEvent: {}
+[2.109303] (skid_drive_controller) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.199493] (skid_drive_controller) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.203436] (-) TimerEvent: {}
+[2.204655] (skid_drive_controller) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.204895] (skid_drive_controller) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.205150] (skid_drive_controller) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.209709] (skid_drive_controller) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.9 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[2.210202] (skid_drive_controller) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[2.303586] (-) TimerEvent: {}
+[2.403959] (-) TimerEvent: {}
+[2.504339] (-) TimerEvent: {}
+[2.566260] (skid_drive_controller) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.571755] (skid_drive_controller) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_gmock/cmake/ament_add_gmock.cmake:69 (add_executable):\n'}
+[2.571979] (skid_drive_controller) StderrLine: {'line': b'  Cannot find source file:\n'}
+[2.572092] (skid_drive_controller) StderrLine: {'line': b'\n'}
+[2.572206] (skid_drive_controller) StderrLine: {'line': b'    test/test_skid_drive_controller.cpp\n'}
+[2.572314] (skid_drive_controller) StderrLine: {'line': b'\n'}
+[2.572593] (skid_drive_controller) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h\n'}
+[2.572722] (skid_drive_controller) StderrLine: {'line': b'  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc\n'}
+[2.572831] (skid_drive_controller) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.572926] (skid_drive_controller) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_gmock/cmake/ament_add_gmock.cmake:52 (_ament_add_gmock)\n'}
+[2.573021] (skid_drive_controller) StderrLine: {'line': b'  CMakeLists.txt:55 (ament_add_gmock)\n'}
+[2.573116] (skid_drive_controller) StderrLine: {'line': b'\n'}
+[2.573195] (skid_drive_controller) StderrLine: {'line': b'\x1b[0m\n'}
+[2.573238] (skid_drive_controller) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/generate_parameter_library/cmake/generate_parameter_library.cmake:154 (add_executable):\n'}
+[2.573280] (skid_drive_controller) StderrLine: {'line': b'  Cannot find source file:\n'}
+[2.573341] (skid_drive_controller) StderrLine: {'line': b'\n'}
+[2.573382] (skid_drive_controller) StderrLine: {'line': b'    test/test_load_skid_drive_controller.cpp\n'}
+[2.573431] (skid_drive_controller) StderrLine: {'line': b'\n'}
+[2.573477] (skid_drive_controller) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h\n'}
+[2.573522] (skid_drive_controller) StderrLine: {'line': b'  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc\n'}
+[2.573564] (skid_drive_controller) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.573606] (skid_drive_controller) StderrLine: {'line': b'  CMakeLists.txt:71 (add_rostest_with_parameters_gmock)\n'}
+[2.573646] (skid_drive_controller) StderrLine: {'line': b'\n'}
+[2.573686] (skid_drive_controller) StderrLine: {'line': b'\x1b[0m\n'}
+[2.573976] (skid_drive_controller) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_gmock/cmake/ament_add_gmock.cmake:69 (add_executable):\n'}
+[2.574049] (skid_drive_controller) StderrLine: {'line': b'  No SOURCES given to target: test_skid_drive_controller\n'}
+[2.574102] (skid_drive_controller) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.574158] (skid_drive_controller) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_gmock/cmake/ament_add_gmock.cmake:52 (_ament_add_gmock)\n'}
+[2.574202] (skid_drive_controller) StderrLine: {'line': b'  CMakeLists.txt:55 (ament_add_gmock)\n'}
+[2.574243] (skid_drive_controller) StderrLine: {'line': b'\n'}
+[2.574283] (skid_drive_controller) StderrLine: {'line': b'\x1b[0m\n'}
+[2.574322] (skid_drive_controller) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/generate_parameter_library/cmake/generate_parameter_library.cmake:154 (add_executable):\n'}
+[2.574363] (skid_drive_controller) StderrLine: {'line': b'  No SOURCES given to target: test_load_skid_drive_controller\n'}
+[2.574404] (skid_drive_controller) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.574445] (skid_drive_controller) StderrLine: {'line': b'  CMakeLists.txt:71 (add_rostest_with_parameters_gmock)\n'}
+[2.574486] (skid_drive_controller) StderrLine: {'line': b'\n'}
+[2.574525] (skid_drive_controller) StderrLine: {'line': b'\x1b[0m\n'}
+[2.574565] (skid_drive_controller) StderrLine: {'line': b'\x1b[0mCMake Generate step failed.  Build files cannot be regenerated correctly.\x1b[0m\n'}
+[2.585832] (skid_drive_controller) CommandEnded: {'returncode': 1}
+[2.604451] (-) TimerEvent: {}
+[2.606400] (skid_drive_controller) JobEnded: {'identifier': 'skid_drive_controller', 'rc': 1}
+[2.616956] (-) EventReactorShutdown: {}

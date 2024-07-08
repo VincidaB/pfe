@@ -1,0 +1,1 @@
+/home/vincent/pfe/open-manipulator/build/robotis_manipulator/ament_cmake_core/robotis_manipulatorConfig-version.cmake
