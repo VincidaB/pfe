@@ -1,12 +1,12 @@
-#ifndef OMNIDRIVE_RPPICO__OMNIBOT_COMMS_HPP_
-#define OMNIDRIVE_RPPICO__OMNIBOT_COMMS_HPP_
+#ifndef DIFFDRIVE_ARDUINO_ARDUINO_COMMS_HPP
+#define DIFFDRIVE_ARDUINO_ARDUINO_COMMS_HPP
 
+// #include <cstring>
 #include <sstream>
+// #include <cstdlib>
+#include <iomanip>
 #include <libserial/SerialPort.h>
 #include <iostream>
-
-#include "rclcpp/rclcpp.hpp"
-
 
 
 LibSerial::BaudRate convert_baud_rate(int baud_rate)
@@ -30,16 +30,15 @@ LibSerial::BaudRate convert_baud_rate(int baud_rate)
   }
 }
 
-class RpPicoComs
+class ArduinoComms
 {
 
 public:
 
-  RpPicoComs() = default;
+  ArduinoComms() = default;
 
   void connect(const std::string &serial_device, int32_t baud_rate, int32_t timeout_ms)
   {  
-    std::cout << "Connecting to serial device: " << serial_device << " at baud rate: " << baud_rate << std::endl;
     timeout_ms_ = timeout_ms;
     serial_conn_.Open(serial_device);
     serial_conn_.SetBaudRate(convert_baud_rate(baud_rate));
@@ -62,7 +61,6 @@ public:
     serial_conn_.Write(msg_to_send);
 
     std::string response = "";
-    //skip the response part for now
     /*
     try
     {
@@ -73,13 +71,13 @@ public:
     {
         std::cerr << "The ReadByte() call has timed out." << std::endl ;
     }
-    */
+
     if (print_output)
     {
-      std::cout << "Sent: " << msg_to_send << " Recv: " << response << std::endl;
     }
-    
 
+    */
+    std::cout << "Sent: " << msg_to_send << " Recv: " << response << std::endl;
     return response;
   }
 
@@ -89,7 +87,7 @@ public:
     std::string response = send_msg("\r");
   }
 
-  void read_encoder_values(int &val_1, int &val_2,int &val_3, int &val_4)
+  void read_encoder_values(int &val_1, int &val_2)
   {
     std::string response = send_msg("e\r");
 
@@ -97,21 +95,17 @@ public:
     size_t del_pos = response.find(delimiter);
     std::string token_1 = response.substr(0, del_pos);
     std::string token_2 = response.substr(del_pos + delimiter.length());
-    std::string token_3 = response.substr(del_pos + delimiter.length());
-    std::string token_4 = response.substr(del_pos + delimiter.length());
-    
+
     val_1 = std::atoi(token_1.c_str());
     val_2 = std::atoi(token_2.c_str());
-    val_3 = std::atoi(token_3.c_str());
-    val_4 = std::atoi(token_4.c_str());
-
   }
-  void set_motor_values(int val_1, int val_2, int val_3, int val_4)
+  void set_motor_values(float val_1, float val_2)
   {
     std::stringstream ss;
-    ss << "m " << val_1 << " " << val_2 << " " << val_3 << " " << val_4 << "\r";
+    ss << std::fixed << std::setprecision(3);
+    ss << "m " << val_1 << " " << val_2 << "\r";
     send_msg(ss.str());
-    }
+  }
 
   void set_pid_values(int k_p, int k_d, int k_i, int k_o)
   {
@@ -125,4 +119,4 @@ private:
     int timeout_ms_;
 };
 
-#endif // OMNIDRIVE_RPPICO__OMNIBOT_SYSTEM_HPP_
+#endif // DIFFDRIVE_ARDUINO_ARDUINO_COMMS_HPP

@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef CRAWLER_HARDWARE_INTERFACE__OMNIBOT_SYSTEM_HPP_
-#define CRAWLER_HARDWARE_INTERFACE__OMNIBOT_SYSTEM_HPP_
+#ifndef DIFFDRIVE_ARDUINO__DIFFBOT_SYSTEM_HPP_
+#define DIFFDRIVE_ARDUINO__DIFFBOT_SYSTEM_HPP_
 
 #include <memory>
 #include <string>
@@ -29,21 +29,19 @@
 #include "rclcpp/time.hpp"
 #include "rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp"
 #include "rclcpp_lifecycle/state.hpp"
-#include "crawler_hardware_interface/visibility_control.h"
+#include "diffdrive_arduino/visibility_control.h"
 
-#include "crawler_hardware_interface/rppico_comms.hpp"
-#include "crawler_hardware_interface/wheel.hpp"
+#include "diffdrive_arduino/arduino_comms.hpp"
+#include "diffdrive_arduino/wheel.hpp"
 
-namespace crawler_hardware_interface
+namespace diffdrive_arduino
 {
-class CrawlerHardwreInterface : public hardware_interface::SystemInterface
+class DiffDriveArduinoHardware : public hardware_interface::SystemInterface
 {
 
 struct Config
 {
-  std::string front_wheel_name = "";
   std::string left_wheel_name = "";
-  std::string back_wheel_name = "";
   std::string right_wheel_name = "";
   float loop_rate = 0.0;
   std::string device = "";
@@ -58,53 +56,51 @@ struct Config
 
 
 public:
-  RCLCPP_SHARED_PTR_DEFINITIONS(CrawlerHardwreInterface)
+  RCLCPP_SHARED_PTR_DEFINITIONS(DiffDriveArduinoHardware);
 
-  CRAWLER_RPPICO_PUBLIC
+  DIFFDRIVE_ARDUINO_PUBLIC
   hardware_interface::CallbackReturn on_init(
     const hardware_interface::HardwareInfo & info) override;
 
-  CRAWLER_RPPICO_PUBLIC
+  DIFFDRIVE_ARDUINO_PUBLIC
   std::vector<hardware_interface::StateInterface> export_state_interfaces() override;
 
-  CRAWLER_RPPICO_PUBLIC
+  DIFFDRIVE_ARDUINO_PUBLIC
   std::vector<hardware_interface::CommandInterface> export_command_interfaces() override;
 
-  CRAWLER_RPPICO_PUBLIC
+  DIFFDRIVE_ARDUINO_PUBLIC
   hardware_interface::CallbackReturn on_configure(
     const rclcpp_lifecycle::State & previous_state) override;
 
-  CRAWLER_RPPICO_PUBLIC
+  DIFFDRIVE_ARDUINO_PUBLIC
   hardware_interface::CallbackReturn on_cleanup(
     const rclcpp_lifecycle::State & previous_state) override;
 
 
-  CRAWLER_RPPICO_PUBLIC
+  DIFFDRIVE_ARDUINO_PUBLIC
   hardware_interface::CallbackReturn on_activate(
     const rclcpp_lifecycle::State & previous_state) override;
 
-  CRAWLER_RPPICO_PUBLIC
+  DIFFDRIVE_ARDUINO_PUBLIC
   hardware_interface::CallbackReturn on_deactivate(
     const rclcpp_lifecycle::State & previous_state) override;
 
-  CRAWLER_RPPICO_PUBLIC
+  DIFFDRIVE_ARDUINO_PUBLIC
   hardware_interface::return_type read(
     const rclcpp::Time & time, const rclcpp::Duration & period) override;
 
-  CRAWLER_RPPICO_PUBLIC
+  DIFFDRIVE_ARDUINO_PUBLIC
   hardware_interface::return_type write(
     const rclcpp::Time & time, const rclcpp::Duration & period) override;
 
 private:
 
-  RpPicoComs comms_;
+  ArduinoComms comms_;
   Config cfg_;
-  Wheel wheel_f_;
   Wheel wheel_l_;
-  Wheel wheel_b_;
   Wheel wheel_r_;
 };
 
-}  // namespace CRAWLER_RPPICO_INTERFACE
+}  // namespace diffdrive_arduino
 
-#endif  // CRAWLER_RPPICO_INTERFACE__OMNIBOT_SYSTEM_HPP_
+#endif  // DIFFDRIVE_ARDUINO__DIFFBOT_SYSTEM_HPP_
