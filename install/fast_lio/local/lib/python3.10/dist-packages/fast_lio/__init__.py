@@ -1,0 +1,1 @@
+/home/vincent/ws_livox/build/fast_lio/rosidl_generator_py/fast_lio/__init__.py
