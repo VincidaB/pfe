@@ -1,0 +1,3 @@
+/home/vincent/pfe/ws/install/skid_drive_controller/lib/libskid_drive_controller.so
+/home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/cmake/export_skid_drive_controllerExport.cmake
+/home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/cmake/export_skid_drive_controllerExport-relwithdebinfo.cmake

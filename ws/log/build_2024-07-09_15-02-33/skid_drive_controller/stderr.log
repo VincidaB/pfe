@@ -1,0 +1,17 @@
+In file included from [01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:25[m[K:
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/include/skid_drive_controller/skid_drive_controller.hpp:161:19:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_msg[m[K’ was not declared in this scope; did you mean ‘[01m[Knav_msgs[m[K’?
+  161 |   std::shared_ptr<[01;31m[Knav_msg[m[K::msg::Odometry> measured_odom_;
+      |                   [01;31m[K^~~~~~~[m[K
+      |                   [32m[Knav_msgs[m[K
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/include/skid_drive_controller/skid_drive_controller.hpp:161:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  161 |   std::shared_ptr<nav_msg::msg::Odometry[01;31m[K>[m[K measured_odom_;
+      |                                         [01;31m[K^[m[K
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:[m[K In lambda function:
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:407:24:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst std::shared_ptr<nav_msgs::msg::Odometry_<std::allocator<void> > >[m[K’ to ‘[01m[Kint[m[K’ in assignment
+  407 |       measured_odom_ = [01;31m[Kmsg[m[K;
+      |                        [01;31m[K^~~[m[K
+      |                        [01;31m[K|[m[K
+      |                        [01;31m[Kconst std::shared_ptr<nav_msgs::msg::Odometry_<std::allocator<void> > >[m[K
+gmake[2]: *** [CMakeFiles/skid_drive_controller.dir/build.make:76: CMakeFiles/skid_drive_controller.dir/src/skid_drive_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/skid_drive_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

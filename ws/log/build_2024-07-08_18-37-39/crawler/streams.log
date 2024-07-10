@@ -1,0 +1,35 @@
+[0.016s] Invoking command in '/home/vincent/pfe/ws/build/crawler': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/vincent/pfe/ws/crawler -DCMAKE_BUILD_TYPE=RelWithDebInfo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vincent/pfe/ws/install/crawler
+[0.028s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.132s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.194s] -- Configuring done
+[0.197s] -- Generating done
+[0.198s] -- Build files have been written to: /home/vincent/pfe/ws/build/crawler
+[0.203s] Invoked command in '/home/vincent/pfe/ws/build/crawler' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/vincent/pfe/ws/crawler -DCMAKE_BUILD_TYPE=RelWithDebInfo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vincent/pfe/ws/install/crawler
+[0.203s] Invoking command in '/home/vincent/pfe/ws/build/crawler': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vincent/pfe/ws/build/crawler -- -j16 -l16
+[0.246s] Invoked command in '/home/vincent/pfe/ws/build/crawler' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vincent/pfe/ws/build/crawler -- -j16 -l16
+[0.288s] Invoking command in '/home/vincent/pfe/ws/build/crawler': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vincent/pfe/ws/build/crawler
+[0.295s] -- Install configuration: "RelWithDebInfo"
+[0.296s] -- Execute custom install script
+[0.296s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/description/robot.urdf.xacro
+[0.296s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/description/robot_core.xacro
+[0.297s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/description/ros2_control.xacro
+[0.297s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/launch/robot.launch.py
+[0.297s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/launch/rsp.launch.py
+[0.297s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/meshes/chassis.dae
+[0.297s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/meshes/chassis.stl
+[0.297s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/ament_index/resource_index/package_run_dependencies/crawler
+[0.297s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/ament_index/resource_index/parent_prefix_path/crawler
+[0.297s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/environment/ament_prefix_path.sh
+[0.297s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/environment/ament_prefix_path.dsv
+[0.297s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/environment/path.sh
+[0.298s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/environment/path.dsv
+[0.298s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/local_setup.bash
+[0.298s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/local_setup.sh
+[0.298s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/local_setup.zsh
+[0.298s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/local_setup.dsv
+[0.298s] -- Symlinking: /home/vincent/pfe/ws/install/crawler/share/crawler/package.dsv
+[0.309s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/ament_index/resource_index/packages/crawler
+[0.310s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/cmake/crawlerConfig.cmake
+[0.310s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/cmake/crawlerConfig-version.cmake
+[0.310s] -- Up-to-date symlink: /home/vincent/pfe/ws/install/crawler/share/crawler/package.xml
+[0.313s] Invoked command in '/home/vincent/pfe/ws/build/crawler' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vincent/pfe/ws/build/crawler

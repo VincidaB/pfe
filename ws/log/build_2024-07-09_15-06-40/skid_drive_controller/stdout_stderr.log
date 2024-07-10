@@ -1,0 +1,22 @@
+[ 20%] Built target skid_drive_controller_parameters
+[35m[1mConsolidate compiler generated dependencies of target skid_drive_controller[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/skid_drive_controller.dir/src/skid_drive_controller.cpp.o[0m
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:[m[K In member function ‘[01m[Kvirtual controller_interface::return_type skid_drive_controller::SkidDriveController::update(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:245:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass realtime_tools::RealtimeBox<std::shared_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >[m[K’ has no member named ‘[01m[Klinear[m[K’
+  245 |   linear_command = linear_command + measured_odom_twist_.[01;31m[Klinear[m[K.x;
+      |                                                          [01;31m[K^~~~~~[m[K
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:[m[K In lambda function:
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:407:41:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Krealtime_tools::RealtimeBox<std::shared_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >[m[K’ and ‘[01m[Kgeometry_msgs::msg::TwistWithCovariance_<std::allocator<void> >::_twist_type[m[K’ {aka ‘[01m[Kgeometry_msgs::msg::Twist_<std::allocator<void> >[m[K’})
+  407 |       measured_odom_twist_ = msg->twist.[01;31m[Ktwist[m[K;
+      |                                         [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/vincent/pfe/ws/src/skid_drive_controller/include/skid_drive_controller/skid_drive_controller.hpp:40[m[K,
+                 from [01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:25[m[K:
+[01m[K/opt/ros/humble/include/realtime_tools/realtime_tools/realtime_box.h:46:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krealtime_tools::RealtimeBox<std::shared_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >& realtime_tools::RealtimeBox<std::shared_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >::operator=(const realtime_tools::RealtimeBox<std::shared_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >&)[m[K’ (deleted)
+   46 | class [01;36m[KRealtimeBox[m[K
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/realtime_tools/realtime_tools/realtime_box.h:46:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kgeometry_msgs::msg::TwistWithCovariance_<std::allocator<void> >::_twist_type[m[K’ {aka ‘[01m[Kgeometry_msgs::msg::Twist_<std::allocator<void> >[m[K’} to ‘[01m[Kconst realtime_tools::RealtimeBox<std::shared_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >&[m[K’
+[01m[K/opt/ros/humble/include/realtime_tools/realtime_tools/realtime_box.h:46:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krealtime_tools::RealtimeBox<std::shared_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >& realtime_tools::RealtimeBox<std::shared_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >::operator=(realtime_tools::RealtimeBox<std::shared_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >&&)[m[K’ (deleted)
+[01m[K/opt/ros/humble/include/realtime_tools/realtime_tools/realtime_box.h:46:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kgeometry_msgs::msg::TwistWithCovariance_<std::allocator<void> >::_twist_type[m[K’ {aka ‘[01m[Kgeometry_msgs::msg::Twist_<std::allocator<void> >[m[K’} to ‘[01m[Krealtime_tools::RealtimeBox<std::shared_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >&&[m[K’
+gmake[2]: *** [CMakeFiles/skid_drive_controller.dir/build.make:76: CMakeFiles/skid_drive_controller.dir/src/skid_drive_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/skid_drive_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

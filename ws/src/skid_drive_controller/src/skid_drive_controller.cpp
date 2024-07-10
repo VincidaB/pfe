@@ -241,6 +241,8 @@ controller_interface::return_type SkidDriveController::update(
 
   previous_commands_.pop();
   previous_commands_.emplace(command);
+  
+  linear_command = linear_command - measured_odom_twist_.linear.x;
 
   //    Publish limited velocity
   if (publish_limited_velocity_ && realtime_limited_velocity_publisher_->trylock())
@@ -384,6 +386,27 @@ controller_interface::CallbackReturn SkidDriveController::on_configure(
           twist_stamped->header.stamp = get_node()->get_clock()->now();
         });
   }
+
+  // initiliaze odometry subscriber
+  odometry_subscriber_ = get_node()->create_subscription<nav_msgs::msg::Odometry>(
+    "odom_sub", rclcpp::SystemDefaultsQoS(),
+    [this](const std::shared_ptr<nav_msgs::msg::Odometry> msg) -> void
+    {
+      if (!subscriber_is_active_)
+      {
+        RCLCPP_WARN(
+          get_node()->get_logger(), "Can't accept new odometry. subscriber is inactive");
+        return;
+      }
+      RCLCPP_INFO(get_node()->get_logger(), "Received odometry message");
+      RCLCPP_INFO(get_node()->get_logger(), "Position: %f, %f, %f", msg->pose.pose.position.x,
+                  msg->pose.pose.position.y, msg->pose.pose.position.z);
+      RCLCPP_INFO(get_node()->get_logger(), "Velocity: %f, %f, %f", msg->twist.twist.linear.x,
+                  msg->twist.twist.linear.y, msg->twist.twist.linear.z);
+
+      measured_odom_twist_ = msg->twist.twist;
+    }
+  );
 
   // initialize odometry publisher and message
   odometry_publisher_ = get_node()->create_publisher<nav_msgs::msg::Odometry>(

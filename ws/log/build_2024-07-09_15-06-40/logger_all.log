@@ -1,0 +1,261 @@
+[0.099s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--cmake-args', '-DCMAKE_BUILD_TYPE=RelWithDebInfo']
+[0.099s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DCMAKE_BUILD_TYPE=RelWithDebInfo'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x74d965846b60>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x74d965957220>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x74d965957220>>, mixin_verb=('build',))
+[0.286s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.286s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.286s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.286s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.286s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.286s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.286s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/vincent/pfe/ws'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(crawler) by extensions ['ignore', 'ignore_ament_install']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(crawler) by extension 'ignore'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(crawler) by extension 'ignore_ament_install'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(crawler) by extensions ['colcon_pkg']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(crawler) by extension 'colcon_pkg'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(crawler) by extensions ['colcon_meta']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(crawler) by extension 'colcon_meta'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(crawler) by extensions ['ros']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(crawler) by extension 'ros'
+[0.301s] DEBUG:colcon.colcon_core.package_identification:Package 'crawler' with type 'ros.ament_cmake' and name 'crawler'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extensions ['ignore', 'ignore_ament_install']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'ignore'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'ignore_ament_install'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extensions ['colcon_pkg']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'colcon_pkg'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extensions ['colcon_meta']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'colcon_meta'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extensions ['ros']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'ros'
+[0.304s] DEBUG:colcon.colcon_core.package_identification:Package 'src/diffdrive_arduino' with type 'ros.ament_cmake' and name 'diffdrive_arduino'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/skid_drive_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/skid_drive_controller) by extension 'ignore'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/skid_drive_controller) by extension 'ignore_ament_install'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/skid_drive_controller) by extensions ['colcon_pkg']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/skid_drive_controller) by extension 'colcon_pkg'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/skid_drive_controller) by extensions ['colcon_meta']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/skid_drive_controller) by extension 'colcon_meta'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/skid_drive_controller) by extensions ['ros']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/skid_drive_controller) by extension 'ros'
+[0.306s] DEBUG:colcon.colcon_core.package_identification:Package 'src/skid_drive_controller' with type 'ros.ament_cmake' and name 'skid_drive_controller'
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.338s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.338s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.339s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/vincent/pfe/ws/install
+[0.340s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/vincent/ros2_ws/install
+[0.342s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 443 installed packages in /opt/ros/humble
+[0.343s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'crawler' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=RelWithDebInfo']'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'crawler' build argument 'cmake_target' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'crawler' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'crawler' build argument 'cmake_clean_cache' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'crawler' build argument 'cmake_clean_first' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'crawler' build argument 'cmake_force_configure' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'crawler' build argument 'ament_cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'crawler' build argument 'catkin_cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'crawler' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.390s] DEBUG:colcon.colcon_core.verb:Building package 'crawler' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vincent/pfe/ws/build/crawler', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=RelWithDebInfo'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vincent/pfe/ws/install/crawler', 'merge_install': False, 'path': '/home/vincent/pfe/ws/crawler', 'symlink_install': True, 'test_result_base': None}
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=RelWithDebInfo']'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_target' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_clean_cache' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_clean_first' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_force_configure' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'ament_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'catkin_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.391s] DEBUG:colcon.colcon_core.verb:Building package 'diffdrive_arduino' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vincent/pfe/ws/build/diffdrive_arduino', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=RelWithDebInfo'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vincent/pfe/ws/install/diffdrive_arduino', 'merge_install': False, 'path': '/home/vincent/pfe/ws/src/diffdrive_arduino', 'symlink_install': True, 'test_result_base': None}
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'skid_drive_controller' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=RelWithDebInfo']'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'skid_drive_controller' build argument 'cmake_target' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'skid_drive_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'skid_drive_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'skid_drive_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'skid_drive_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'skid_drive_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'skid_drive_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'skid_drive_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.392s] DEBUG:colcon.colcon_core.verb:Building package 'skid_drive_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vincent/pfe/ws/build/skid_drive_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=RelWithDebInfo'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vincent/pfe/ws/install/skid_drive_controller', 'merge_install': False, 'path': '/home/vincent/pfe/ws/src/skid_drive_controller', 'symlink_install': True, 'test_result_base': None}
+[0.392s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.393s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.393s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/vincent/pfe/ws/crawler' with build type 'ament_cmake'
+[0.393s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vincent/pfe/ws/crawler'
+[0.396s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.396s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.396s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.400s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/vincent/pfe/ws/src/diffdrive_arduino' with build type 'ament_cmake'
+[0.401s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vincent/pfe/ws/src/diffdrive_arduino'
+[0.401s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.401s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.405s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/vincent/pfe/ws/src/skid_drive_controller' with build type 'ament_cmake'
+[0.405s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vincent/pfe/ws/src/skid_drive_controller'
+[0.405s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.405s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.415s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vincent/pfe/ws/build/crawler': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vincent/pfe/ws/build/crawler -- -j16 -l16
+[0.419s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vincent/pfe/ws/build/diffdrive_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vincent/pfe/ws/build/diffdrive_arduino -- -j16 -l16
+[0.423s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vincent/pfe/ws/build/skid_drive_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vincent/pfe/ws/build/skid_drive_controller -- -j16 -l16
+[0.467s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vincent/pfe/ws/build/crawler' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vincent/pfe/ws/build/crawler -- -j16 -l16
+[0.516s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vincent/pfe/ws/build/crawler': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vincent/pfe/ws/build/crawler
+[0.518s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vincent/pfe/ws/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vincent/pfe/ws/build/diffdrive_arduino -- -j16 -l16
+[0.549s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(crawler)
+[0.550s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vincent/pfe/ws/build/crawler' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vincent/pfe/ws/build/crawler
+[0.552s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/crawler' for CMake module files
+[0.553s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/crawler' for CMake config files
+[0.553s] Level 1:colcon.colcon_core.shell:create_environment_hook('crawler', 'cmake_prefix_path')
+[0.554s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/crawler/share/crawler/hook/cmake_prefix_path.ps1'
+[0.554s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vincent/pfe/ws/install/crawler/share/crawler/hook/cmake_prefix_path.dsv'
+[0.555s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/crawler/share/crawler/hook/cmake_prefix_path.sh'
+[0.556s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/crawler/bin'
+[0.556s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/crawler/lib/pkgconfig/crawler.pc'
+[0.556s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/crawler/lib/python3.10/site-packages'
+[0.556s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/crawler/bin'
+[0.557s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/crawler/share/crawler/package.ps1'
+[0.558s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vincent/pfe/ws/install/crawler/share/crawler/package.dsv'
+[0.558s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/crawler/share/crawler/package.sh'
+[0.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/crawler/share/crawler/package.bash'
+[0.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/crawler/share/crawler/package.zsh'
+[0.560s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vincent/pfe/ws/install/crawler/share/colcon-core/packages/crawler)
+[0.564s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vincent/pfe/ws/build/diffdrive_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vincent/pfe/ws/build/diffdrive_arduino
+[0.597s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(crawler)
+[0.597s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/crawler' for CMake module files
+[0.598s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/crawler' for CMake config files
+[0.598s] Level 1:colcon.colcon_core.shell:create_environment_hook('crawler', 'cmake_prefix_path')
+[0.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/crawler/share/crawler/hook/cmake_prefix_path.ps1'
+[0.599s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vincent/pfe/ws/install/crawler/share/crawler/hook/cmake_prefix_path.dsv'
+[0.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/crawler/share/crawler/hook/cmake_prefix_path.sh'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/crawler/bin'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/crawler/lib/pkgconfig/crawler.pc'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/crawler/lib/python3.10/site-packages'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/crawler/bin'
+[0.601s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/crawler/share/crawler/package.ps1'
+[0.601s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vincent/pfe/ws/install/crawler/share/crawler/package.dsv'
+[0.602s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/crawler/share/crawler/package.sh'
+[0.602s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/crawler/share/crawler/package.bash'
+[0.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/crawler/share/crawler/package.zsh'
+[0.603s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vincent/pfe/ws/install/crawler/share/colcon-core/packages/crawler)
+[0.605s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diffdrive_arduino)
+[0.605s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino' for CMake module files
+[0.606s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vincent/pfe/ws/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vincent/pfe/ws/build/diffdrive_arduino
+[0.606s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino' for CMake config files
+[0.607s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_arduino', 'cmake_prefix_path')
+[0.607s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.ps1'
+[0.607s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.dsv'
+[0.608s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.sh'
+[0.609s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino/lib'
+[0.609s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_arduino', 'ld_library_path_lib')
+[0.609s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.ps1'
+[0.610s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.dsv'
+[0.610s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.sh'
+[0.611s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino/bin'
+[0.611s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino/lib/pkgconfig/diffdrive_arduino.pc'
+[0.611s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino/lib/python3.10/site-packages'
+[0.611s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino/bin'
+[0.611s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/package.ps1'
+[0.612s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/package.dsv'
+[0.612s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/package.sh'
+[0.613s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/package.bash'
+[0.613s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/package.zsh'
+[0.614s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vincent/pfe/ws/install/diffdrive_arduino/share/colcon-core/packages/diffdrive_arduino)
+[0.657s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diffdrive_arduino)
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino' for CMake module files
+[0.658s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino' for CMake config files
+[0.658s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_arduino', 'cmake_prefix_path')
+[0.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.ps1'
+[0.659s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.dsv'
+[0.660s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.sh'
+[0.660s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino/lib'
+[0.660s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_arduino', 'ld_library_path_lib')
+[0.660s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.ps1'
+[0.661s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.dsv'
+[0.661s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.sh'
+[0.662s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino/bin'
+[0.662s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino/lib/pkgconfig/diffdrive_arduino.pc'
+[0.662s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino/lib/python3.10/site-packages'
+[0.662s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/diffdrive_arduino/bin'
+[0.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/package.ps1'
+[0.663s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/package.dsv'
+[0.663s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/package.sh'
+[0.664s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/package.bash'
+[0.664s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/diffdrive_arduino/share/diffdrive_arduino/package.zsh'
+[0.665s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vincent/pfe/ws/install/diffdrive_arduino/share/colcon-core/packages/diffdrive_arduino)
+[8.078s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vincent/pfe/ws/build/skid_drive_controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vincent/pfe/ws/build/skid_drive_controller -- -j16 -l16
+[8.122s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(skid_drive_controller)
+[8.122s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/skid_drive_controller' for CMake module files
+[8.122s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/skid_drive_controller' for CMake config files
+[8.122s] Level 1:colcon.colcon_core.shell:create_environment_hook('skid_drive_controller', 'cmake_prefix_path')
+[8.123s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/hook/cmake_prefix_path.ps1'
+[8.123s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/hook/cmake_prefix_path.dsv'
+[8.123s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/hook/cmake_prefix_path.sh'
+[8.124s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/skid_drive_controller/lib'
+[8.124s] Level 1:colcon.colcon_core.shell:create_environment_hook('skid_drive_controller', 'ld_library_path_lib')
+[8.124s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/hook/ld_library_path_lib.ps1'
+[8.124s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/hook/ld_library_path_lib.dsv'
+[8.125s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/hook/ld_library_path_lib.sh'
+[8.125s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/skid_drive_controller/bin'
+[8.125s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/skid_drive_controller/lib/pkgconfig/skid_drive_controller.pc'
+[8.125s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/skid_drive_controller/lib/python3.10/site-packages'
+[8.125s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/pfe/ws/install/skid_drive_controller/bin'
+[8.125s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/package.ps1'
+[8.126s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/package.dsv'
+[8.126s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/package.sh'
+[8.126s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/package.bash'
+[8.127s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/package.zsh'
+[8.127s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vincent/pfe/ws/install/skid_drive_controller/share/colcon-core/packages/skid_drive_controller)
+[8.138s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.138s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.138s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[8.138s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.143s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[8.143s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.143s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.143s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[8.164s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[8.164s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vincent/pfe/ws/install/local_setup.ps1'
+[8.165s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vincent/pfe/ws/install/_local_setup_util_ps1.py'
+[8.166s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vincent/pfe/ws/install/setup.ps1'
+[8.167s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vincent/pfe/ws/install/local_setup.sh'
+[8.168s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vincent/pfe/ws/install/_local_setup_util_sh.py'
+[8.168s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vincent/pfe/ws/install/setup.sh'
+[8.169s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vincent/pfe/ws/install/local_setup.bash'
+[8.170s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vincent/pfe/ws/install/setup.bash'
+[8.171s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vincent/pfe/ws/install/local_setup.zsh'
+[8.171s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vincent/pfe/ws/install/setup.zsh'

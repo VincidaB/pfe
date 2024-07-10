@@ -1,0 +1,218 @@
+[0.000000] (-) TimerEvent: {}
+[0.000422] (crawler) JobQueued: {'identifier': 'crawler', 'dependencies': OrderedDict()}
+[0.000482] (skid_drive_controller) JobQueued: {'identifier': 'skid_drive_controller', 'dependencies': OrderedDict()}
+[0.000517] (crawler) JobStarted: {'identifier': 'crawler'}
+[0.005385] (skid_drive_controller) JobStarted: {'identifier': 'skid_drive_controller'}
+[0.009272] (crawler) JobProgress: {'identifier': 'crawler', 'progress': 'cmake'}
+[0.010121] (crawler) JobProgress: {'identifier': 'crawler', 'progress': 'build'}
+[0.010195] (crawler) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vincent/pfe/ws/build/crawler', '--', '-j16', '-l16'], 'cwd': '/home/vincent/pfe/ws/build/crawler', 'env': OrderedDict([('PROFILEHOME', ''), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('KDE_FULL_SESSION', 'true'), ('ISAACSIM_SKIP_WARMUP', 'Y'), ('LANGUAGE', ''), ('USER', 'vincent'), ('PAM_KWALLET5_LOGIN', '/run/user/1000/kwallet5.socket'), ('QT_SCREEN_SCALE_FACTORS', 'HDMI-0=1;DP-0=1;eDP-1-0=1;DisplayPort-1-0=1;DisplayPort-1-1=1;DisplayPort-1-2=1;DisplayPort-1-3=1;DisplayPort-1-4=1;DisplayPort-1-5=1;DisplayPort-1-6=1;DisplayPort-1-7=1;'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1732'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('XCURSOR_SIZE', '24'), ('KONSOLE_VERSION', '211203'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vincent/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vincent'), ('KDE_APPLICATIONS_AS_SCOPE', '1'), ('OLDPWD', '/home/vincent/pfe'), ('DESKTOP_SESSION', 'plasma'), ('ROS_PYTHON_VERSION', '3'), ('SHELL_SESSION_ID', 'cd935bc5cc6c47eab9c686bbf8fd5ba2'), ('GTK_RC_FILES', '/etc/gtk/gtkrc:/home/vincent/.gtkrc:/home/vincent/.config/gtkrc'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('KDE_SESSION_VERSION', '5'), ('KONSOLE_DBUS_SESSION', '/Sessions/1'), ('SYSTEMD_EXEC_PID', '1654'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('KONSOLE_DBUS_WINDOW', '/Windows/1'), ('MANDATORY_PATH', '/usr/share/gconf/plasma.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/vincent/ros2_ws/install'), ('INFOPATH', '/usr/local/texlive/2021/texmf-dist/doc/info:'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vincent'), ('WINDOWID', '104857607'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/plasma.default.path'), ('COLORFGBG', '15;0'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('GTK2_RC_FILES', '/etc/gtk-2.0/gtkrc:/home/vincent/.gtkrc-2.0:/home/vincent/.config/gtkrc-2.0'), ('PATH', '/usr/local/texlive/2021/bin/x86_64-linux:/opt/ros/humble/bin:/home/vincent/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XCURSOR_THEME', 'breeze_cursors'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'KDE'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'KDE'), ('XAUTHORITY', '/home/vincent/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXq8NdNe/agent.1671'), ('AMENT_PREFIX_PATH', '/home/vincent/ros2_ws/install/zed_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('KONSOLE_DBUS_SERVICE', ':1.1707'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '1'), ('PWD', '/home/vincent/pfe/ws/build/crawler'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/home/vincent/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vincent/ros2_ws/install/zed_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('KDE_SESSION_UID', '1000'), ('COLCON', '1'), ('MANPATH', '/usr/local/texlive/2021/texmf-dist/doc/man:'), ('CMAKE_PREFIX_PATH', '/home/vincent/ros2_ws/install/zed_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.012916] (skid_drive_controller) JobProgress: {'identifier': 'skid_drive_controller', 'progress': 'cmake'}
+[0.013300] (skid_drive_controller) JobProgress: {'identifier': 'skid_drive_controller', 'progress': 'build'}
+[0.013544] (skid_drive_controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vincent/pfe/ws/build/skid_drive_controller', '--', '-j16', '-l16'], 'cwd': '/home/vincent/pfe/ws/build/skid_drive_controller', 'env': OrderedDict([('PROFILEHOME', ''), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('KDE_FULL_SESSION', 'true'), ('ISAACSIM_SKIP_WARMUP', 'Y'), ('LANGUAGE', ''), ('USER', 'vincent'), ('PAM_KWALLET5_LOGIN', '/run/user/1000/kwallet5.socket'), ('QT_SCREEN_SCALE_FACTORS', 'HDMI-0=1;DP-0=1;eDP-1-0=1;DisplayPort-1-0=1;DisplayPort-1-1=1;DisplayPort-1-2=1;DisplayPort-1-3=1;DisplayPort-1-4=1;DisplayPort-1-5=1;DisplayPort-1-6=1;DisplayPort-1-7=1;'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1732'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('XCURSOR_SIZE', '24'), ('KONSOLE_VERSION', '211203'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vincent/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vincent'), ('KDE_APPLICATIONS_AS_SCOPE', '1'), ('OLDPWD', '/home/vincent/pfe'), ('DESKTOP_SESSION', 'plasma'), ('ROS_PYTHON_VERSION', '3'), ('SHELL_SESSION_ID', 'cd935bc5cc6c47eab9c686bbf8fd5ba2'), ('GTK_RC_FILES', '/etc/gtk/gtkrc:/home/vincent/.gtkrc:/home/vincent/.config/gtkrc'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('KDE_SESSION_VERSION', '5'), ('KONSOLE_DBUS_SESSION', '/Sessions/1'), ('SYSTEMD_EXEC_PID', '1654'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('KONSOLE_DBUS_WINDOW', '/Windows/1'), ('MANDATORY_PATH', '/usr/share/gconf/plasma.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/vincent/ros2_ws/install'), ('INFOPATH', '/usr/local/texlive/2021/texmf-dist/doc/info:'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vincent'), ('WINDOWID', '104857607'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/plasma.default.path'), ('COLORFGBG', '15;0'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('GTK2_RC_FILES', '/etc/gtk-2.0/gtkrc:/home/vincent/.gtkrc-2.0:/home/vincent/.config/gtkrc-2.0'), ('PATH', '/usr/local/texlive/2021/bin/x86_64-linux:/opt/ros/humble/bin:/home/vincent/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XCURSOR_THEME', 'breeze_cursors'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'KDE'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'KDE'), ('XAUTHORITY', '/home/vincent/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXq8NdNe/agent.1671'), ('AMENT_PREFIX_PATH', '/home/vincent/ros2_ws/install/zed_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('KONSOLE_DBUS_SERVICE', ':1.1707'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '1'), ('PWD', '/home/vincent/pfe/ws/build/skid_drive_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/home/vincent/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vincent/ros2_ws/install/zed_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('KDE_SESSION_UID', '1000'), ('COLCON', '1'), ('MANPATH', '/usr/local/texlive/2021/texmf-dist/doc/man:'), ('CMAKE_PREFIX_PATH', '/home/vincent/ros2_ws/install/zed_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.051600] (crawler) CommandEnded: {'returncode': 0}
+[0.062124] (skid_drive_controller) StdoutLine: {'line': b'[ 20%] Built target skid_drive_controller_parameters\n'}
+[0.072211] (skid_drive_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target skid_drive_controller\x1b[0m\n'}
+[0.073326] (crawler) JobProgress: {'identifier': 'crawler', 'progress': 'install'}
+[0.081851] (crawler) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vincent/pfe/ws/build/crawler'], 'cwd': '/home/vincent/pfe/ws/build/crawler', 'env': OrderedDict([('PROFILEHOME', ''), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('KDE_FULL_SESSION', 'true'), ('ISAACSIM_SKIP_WARMUP', 'Y'), ('LANGUAGE', ''), ('USER', 'vincent'), ('PAM_KWALLET5_LOGIN', '/run/user/1000/kwallet5.socket'), ('QT_SCREEN_SCALE_FACTORS', 'HDMI-0=1;DP-0=1;eDP-1-0=1;DisplayPort-1-0=1;DisplayPort-1-1=1;DisplayPort-1-2=1;DisplayPort-1-3=1;DisplayPort-1-4=1;DisplayPort-1-5=1;DisplayPort-1-6=1;DisplayPort-1-7=1;'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1732'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('XCURSOR_SIZE', '24'), ('KONSOLE_VERSION', '211203'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vincent/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vincent'), ('KDE_APPLICATIONS_AS_SCOPE', '1'), ('OLDPWD', '/home/vincent/pfe'), ('DESKTOP_SESSION', 'plasma'), ('ROS_PYTHON_VERSION', '3'), ('SHELL_SESSION_ID', 'cd935bc5cc6c47eab9c686bbf8fd5ba2'), ('GTK_RC_FILES', '/etc/gtk/gtkrc:/home/vincent/.gtkrc:/home/vincent/.config/gtkrc'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('KDE_SESSION_VERSION', '5'), ('KONSOLE_DBUS_SESSION', '/Sessions/1'), ('SYSTEMD_EXEC_PID', '1654'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('KONSOLE_DBUS_WINDOW', '/Windows/1'), ('MANDATORY_PATH', '/usr/share/gconf/plasma.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/vincent/ros2_ws/install'), ('INFOPATH', '/usr/local/texlive/2021/texmf-dist/doc/info:'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vincent'), ('WINDOWID', '104857607'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/plasma.default.path'), ('COLORFGBG', '15;0'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('GTK2_RC_FILES', '/etc/gtk-2.0/gtkrc:/home/vincent/.gtkrc-2.0:/home/vincent/.config/gtkrc-2.0'), ('PATH', '/usr/local/texlive/2021/bin/x86_64-linux:/opt/ros/humble/bin:/home/vincent/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XCURSOR_THEME', 'breeze_cursors'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'KDE'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'KDE'), ('XAUTHORITY', '/home/vincent/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXq8NdNe/agent.1671'), ('AMENT_PREFIX_PATH', '/home/vincent/ros2_ws/install/zed_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('KONSOLE_DBUS_SERVICE', ':1.1707'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '1'), ('PWD', '/home/vincent/pfe/ws/build/crawler'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/home/vincent/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vincent/ros2_ws/install/zed_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('KDE_SESSION_UID', '1000'), ('COLCON', '1'), ('MANPATH', '/usr/local/texlive/2021/texmf-dist/doc/man:'), ('CMAKE_PREFIX_PATH', '/home/vincent/ros2_ws/install/zed_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.089763] (crawler) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.090022] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/description\n'}
+[0.090086] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/description/ros2_control.xacro\n'}
+[0.090152] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/description/robot_core.xacro\n'}
+[0.090208] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/description/robot.urdf.xacro\n'}
+[0.090257] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/launch\n'}
+[0.090305] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/launch/robot.launch.py\n'}
+[0.090356] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/launch/rsp.launch.py\n'}
+[0.090403] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/meshes\n'}
+[0.090449] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/meshes/chassis.dae\n'}
+[0.090538] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/meshes/chassis.stl\n'}
+[0.090592] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/ament_index/resource_index/package_run_dependencies/crawler\n'}
+[0.090715] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/ament_index/resource_index/parent_prefix_path/crawler\n'}
+[0.090758] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/environment/ament_prefix_path.sh\n'}
+[0.090800] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/environment/ament_prefix_path.dsv\n'}
+[0.090843] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/environment/path.sh\n'}
+[0.090885] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/environment/path.dsv\n'}
+[0.090935] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/local_setup.bash\n'}
+[0.090975] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/local_setup.sh\n'}
+[0.091015] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/local_setup.zsh\n'}
+[0.091058] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/local_setup.dsv\n'}
+[0.091100] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/package.dsv\n'}
+[0.091155] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/ament_index/resource_index/packages/crawler\n'}
+[0.091198] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/cmake/crawlerConfig.cmake\n'}
+[0.091239] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/cmake/crawlerConfig-version.cmake\n'}
+[0.091283] (crawler) StdoutLine: {'line': b'-- Up-to-date: /home/vincent/pfe/ws/install/crawler/share/crawler/package.xml\n'}
+[0.092296] (crawler) CommandEnded: {'returncode': 0}
+[0.097581] (skid_drive_controller) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/skid_drive_controller.dir/src/skid_drive_controller.cpp.o\x1b[0m\n'}
+[0.099309] (-) TimerEvent: {}
+[0.130807] (crawler) JobEnded: {'identifier': 'crawler', 'rc': 0}
+[0.199452] (-) TimerEvent: {}
+[0.299795] (-) TimerEvent: {}
+[0.400143] (-) TimerEvent: {}
+[0.500480] (-) TimerEvent: {}
+[0.600937] (-) TimerEvent: {}
+[0.701487] (-) TimerEvent: {}
+[0.802015] (-) TimerEvent: {}
+[0.902750] (-) TimerEvent: {}
+[1.003135] (-) TimerEvent: {}
+[1.103497] (-) TimerEvent: {}
+[1.203854] (-) TimerEvent: {}
+[1.304219] (-) TimerEvent: {}
+[1.404569] (-) TimerEvent: {}
+[1.504961] (-) TimerEvent: {}
+[1.605302] (-) TimerEvent: {}
+[1.705709] (-) TimerEvent: {}
+[1.806077] (-) TimerEvent: {}
+[1.906446] (-) TimerEvent: {}
+[2.006839] (-) TimerEvent: {}
+[2.107212] (-) TimerEvent: {}
+[2.207602] (-) TimerEvent: {}
+[2.308022] (-) TimerEvent: {}
+[2.408412] (-) TimerEvent: {}
+[2.508763] (-) TimerEvent: {}
+[2.609236] (-) TimerEvent: {}
+[2.709659] (-) TimerEvent: {}
+[2.810138] (-) TimerEvent: {}
+[2.910714] (-) TimerEvent: {}
+[3.011090] (-) TimerEvent: {}
+[3.111470] (-) TimerEvent: {}
+[3.211842] (-) TimerEvent: {}
+[3.312235] (-) TimerEvent: {}
+[3.412615] (-) TimerEvent: {}
+[3.512990] (-) TimerEvent: {}
+[3.613348] (-) TimerEvent: {}
+[3.713715] (-) TimerEvent: {}
+[3.814061] (-) TimerEvent: {}
+[3.914417] (-) TimerEvent: {}
+[4.014792] (-) TimerEvent: {}
+[4.115202] (-) TimerEvent: {}
+[4.215669] (-) TimerEvent: {}
+[4.316050] (-) TimerEvent: {}
+[4.416424] (-) TimerEvent: {}
+[4.516800] (-) TimerEvent: {}
+[4.617169] (-) TimerEvent: {}
+[4.717553] (-) TimerEvent: {}
+[4.817931] (-) TimerEvent: {}
+[4.918286] (-) TimerEvent: {}
+[5.018663] (-) TimerEvent: {}
+[5.119014] (-) TimerEvent: {}
+[5.219384] (-) TimerEvent: {}
+[5.319758] (-) TimerEvent: {}
+[5.420272] (-) TimerEvent: {}
+[5.520671] (-) TimerEvent: {}
+[5.621045] (-) TimerEvent: {}
+[5.721420] (-) TimerEvent: {}
+[5.821785] (-) TimerEvent: {}
+[5.922150] (-) TimerEvent: {}
+[6.022502] (-) TimerEvent: {}
+[6.122831] (-) TimerEvent: {}
+[6.223201] (-) TimerEvent: {}
+[6.323585] (-) TimerEvent: {}
+[6.424075] (-) TimerEvent: {}
+[6.524453] (-) TimerEvent: {}
+[6.624808] (-) TimerEvent: {}
+[6.725294] (-) TimerEvent: {}
+[6.825675] (-) TimerEvent: {}
+[6.926087] (-) TimerEvent: {}
+[7.026492] (-) TimerEvent: {}
+[7.126889] (-) TimerEvent: {}
+[7.227275] (-) TimerEvent: {}
+[7.327653] (-) TimerEvent: {}
+[7.428023] (-) TimerEvent: {}
+[7.528372] (-) TimerEvent: {}
+[7.628726] (-) TimerEvent: {}
+[7.729072] (-) TimerEvent: {}
+[7.829439] (-) TimerEvent: {}
+[7.929791] (-) TimerEvent: {}
+[8.030269] (-) TimerEvent: {}
+[8.130909] (-) TimerEvent: {}
+[8.231280] (-) TimerEvent: {}
+[8.331661] (-) TimerEvent: {}
+[8.432023] (-) TimerEvent: {}
+[8.532398] (-) TimerEvent: {}
+[8.632773] (-) TimerEvent: {}
+[8.733127] (-) TimerEvent: {}
+[8.833475] (-) TimerEvent: {}
+[8.933822] (-) TimerEvent: {}
+[9.034167] (-) TimerEvent: {}
+[9.134523] (-) TimerEvent: {}
+[9.234868] (-) TimerEvent: {}
+[9.335266] (-) TimerEvent: {}
+[9.435641] (-) TimerEvent: {}
+[9.536005] (-) TimerEvent: {}
+[9.636384] (-) TimerEvent: {}
+[9.736753] (-) TimerEvent: {}
+[9.837199] (-) TimerEvent: {}
+[9.937575] (-) TimerEvent: {}
+[10.037943] (-) TimerEvent: {}
+[10.138296] (-) TimerEvent: {}
+[10.238685] (-) TimerEvent: {}
+[10.339029] (-) TimerEvent: {}
+[10.439386] (-) TimerEvent: {}
+[10.539728] (-) TimerEvent: {}
+[10.640208] (-) TimerEvent: {}
+[10.740577] (-) TimerEvent: {}
+[10.840967] (-) TimerEvent: {}
+[10.941330] (-) TimerEvent: {}
+[11.041739] (-) TimerEvent: {}
+[11.142140] (-) TimerEvent: {}
+[11.242533] (-) TimerEvent: {}
+[11.342916] (-) TimerEvent: {}
+[11.443267] (-) TimerEvent: {}
+[11.543650] (-) TimerEvent: {}
+[11.644034] (-) TimerEvent: {}
+[11.744400] (-) TimerEvent: {}
+[11.844775] (-) TimerEvent: {}
+[11.945186] (-) TimerEvent: {}
+[12.046339] (-) TimerEvent: {}
+[12.146753] (-) TimerEvent: {}
+[12.247139] (-) TimerEvent: {}
+[12.290428] (skid_drive_controller) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX shared library libskid_drive_controller.so\x1b[0m\n'}
+[12.347271] (-) TimerEvent: {}
+[12.447611] (-) TimerEvent: {}
+[12.547941] (-) TimerEvent: {}
+[12.648262] (-) TimerEvent: {}
+[12.748590] (-) TimerEvent: {}
+[12.848939] (-) TimerEvent: {}
+[12.949288] (-) TimerEvent: {}
+[13.049630] (-) TimerEvent: {}
+[13.089619] (skid_drive_controller) StdoutLine: {'line': b'[100%] Built target skid_drive_controller\n'}
+[13.101660] (skid_drive_controller) CommandEnded: {'returncode': 0}
+[13.141312] (skid_drive_controller) JobProgress: {'identifier': 'skid_drive_controller', 'progress': 'install'}
+[13.142303] (skid_drive_controller) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vincent/pfe/ws/build/skid_drive_controller'], 'cwd': '/home/vincent/pfe/ws/build/skid_drive_controller', 'env': OrderedDict([('PROFILEHOME', ''), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('KDE_FULL_SESSION', 'true'), ('ISAACSIM_SKIP_WARMUP', 'Y'), ('LANGUAGE', ''), ('USER', 'vincent'), ('PAM_KWALLET5_LOGIN', '/run/user/1000/kwallet5.socket'), ('QT_SCREEN_SCALE_FACTORS', 'HDMI-0=1;DP-0=1;eDP-1-0=1;DisplayPort-1-0=1;DisplayPort-1-1=1;DisplayPort-1-2=1;DisplayPort-1-3=1;DisplayPort-1-4=1;DisplayPort-1-5=1;DisplayPort-1-6=1;DisplayPort-1-7=1;'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1732'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('XCURSOR_SIZE', '24'), ('KONSOLE_VERSION', '211203'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vincent/ros2_ws/install/zed_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vincent'), ('KDE_APPLICATIONS_AS_SCOPE', '1'), ('OLDPWD', '/home/vincent/pfe'), ('DESKTOP_SESSION', 'plasma'), ('ROS_PYTHON_VERSION', '3'), ('SHELL_SESSION_ID', 'cd935bc5cc6c47eab9c686bbf8fd5ba2'), ('GTK_RC_FILES', '/etc/gtk/gtkrc:/home/vincent/.gtkrc:/home/vincent/.config/gtkrc'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('KDE_SESSION_VERSION', '5'), ('KONSOLE_DBUS_SESSION', '/Sessions/1'), ('SYSTEMD_EXEC_PID', '1654'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('KONSOLE_DBUS_WINDOW', '/Windows/1'), ('MANDATORY_PATH', '/usr/share/gconf/plasma.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/vincent/ros2_ws/install'), ('INFOPATH', '/usr/local/texlive/2021/texmf-dist/doc/info:'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vincent'), ('WINDOWID', '104857607'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/plasma.default.path'), ('COLORFGBG', '15;0'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('GTK2_RC_FILES', '/etc/gtk-2.0/gtkrc:/home/vincent/.gtkrc-2.0:/home/vincent/.config/gtkrc-2.0'), ('PATH', '/usr/local/texlive/2021/bin/x86_64-linux:/opt/ros/humble/bin:/home/vincent/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XCURSOR_THEME', 'breeze_cursors'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'KDE'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'KDE'), ('XAUTHORITY', '/home/vincent/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXq8NdNe/agent.1671'), ('AMENT_PREFIX_PATH', '/home/vincent/ros2_ws/install/zed_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('KONSOLE_DBUS_SERVICE', ':1.1707'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '1'), ('PWD', '/home/vincent/pfe/ws/build/skid_drive_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/home/vincent/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vincent/ros2_ws/install/zed_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('KDE_SESSION_UID', '1000'), ('COLCON', '1'), ('MANPATH', '/usr/local/texlive/2021/texmf-dist/doc/man:'), ('CMAKE_PREFIX_PATH', '/home/vincent/ros2_ws/install/zed_interfaces:/opt/ros/humble')]), 'shell': False}
+[13.149737] (-) TimerEvent: {}
+[13.150105] (skid_drive_controller) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[13.150315] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/include/skid_drive_controller_parameters\n'}
+[13.150546] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/include/skid_drive_controller_parameters/skid_drive_controller_parameters.hpp\n'}
+[13.150684] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/skid_drive_plugin.xml\n'}
+[13.151403] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/include/skid_drive_controller\n'}
+[13.151581] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/include/skid_drive_controller/skid_drive_controller\n'}
+[13.151704] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/include/skid_drive_controller/skid_drive_controller/odometry.hpp\n'}
+[13.151816] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/include/skid_drive_controller/skid_drive_controller/visibility_control.h\n'}
+[13.151924] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/include/skid_drive_controller/skid_drive_controller/skid_drive_controller.hpp\n'}
+[13.152062] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/include/skid_drive_controller/skid_drive_controller/speed_limiter.hpp\n'}
+[13.152163] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/lib/libskid_drive_controller.so\n'}
+[13.177400] (skid_drive_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/vincent/pfe/ws/install/skid_drive_controller/lib/libskid_drive_controller.so" to ""\n'}
+[13.177858] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/environment/library_path.sh\n'}
+[13.178059] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/environment/library_path.dsv\n'}
+[13.178210] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/ament_index/resource_index/package_run_dependencies/skid_drive_controller\n'}
+[13.178393] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/ament_index/resource_index/parent_prefix_path/skid_drive_controller\n'}
+[13.178494] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/environment/ament_prefix_path.sh\n'}
+[13.178562] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/environment/ament_prefix_path.dsv\n'}
+[13.178631] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/environment/path.sh\n'}
+[13.178679] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/environment/path.dsv\n'}
+[13.178740] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/local_setup.bash\n'}
+[13.178789] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/local_setup.sh\n'}
+[13.178861] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/local_setup.zsh\n'}
+[13.178981] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/local_setup.dsv\n'}
+[13.179100] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/package.dsv\n'}
+[13.179296] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/ament_index/resource_index/packages/skid_drive_controller\n'}
+[13.179462] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/ament_index/resource_index/controller_interface__pluginlib__plugin/skid_drive_controller\n'}
+[13.179639] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/cmake/export_skid_drive_controllerExport.cmake\n'}
+[13.179793] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/cmake/export_skid_drive_controllerExport-noconfig.cmake\n'}
+[13.179921] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[13.180052] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[13.180190] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/cmake/skid_drive_controllerConfig.cmake\n'}
+[13.180301] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/cmake/skid_drive_controllerConfig-version.cmake\n'}
+[13.180426] (skid_drive_controller) StdoutLine: {'line': b'-- Installing: /home/vincent/pfe/ws/install/skid_drive_controller/share/skid_drive_controller/package.xml\n'}
+[13.182864] (skid_drive_controller) CommandEnded: {'returncode': 0}
+[13.237218] (skid_drive_controller) JobEnded: {'identifier': 'skid_drive_controller', 'rc': 0}
+[13.238180] (-) EventReactorShutdown: {}

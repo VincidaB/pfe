@@ -1,0 +1,13 @@
+In file included from [01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:25[m[K:
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/include/skid_drive_controller/skid_drive_controller.hpp:161:57:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K{nullptr}[m[K’ from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kgeometry_msgs::msg::Twist[m[K’ {aka ‘[01m[Kgeometry_msgs::msg::Twist_<std::allocator<void> >[m[K’}
+  161 |   geometry_msgs::msg::Twist measured_odom_twist_{nullptr[01;31m[K}[m[K;
+      |                                                         [01;31m[K^[m[K
+      |                                                         [01;31m[K|[m[K
+      |                                                         [01;31m[K<brace-enclosed initializer list>[m[K
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:[m[K In member function ‘[01m[Kvirtual controller_interface::return_type skid_drive_controller::SkidDriveController::update(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:245:57:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kgeometry_msgs::msg::Twist[m[K’ {aka ‘[01m[Kgeometry_msgs::msg::Twist_<std::allocator<void> >[m[K’}
+  245 |   linear_command = linear_command + measured_odom_twist_[01;31m[K->[m[Klinear.x;
+      |                                                         [01;31m[K^~[m[K
+gmake[2]: *** [CMakeFiles/skid_drive_controller.dir/build.make:76: CMakeFiles/skid_drive_controller.dir/src/skid_drive_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/skid_drive_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

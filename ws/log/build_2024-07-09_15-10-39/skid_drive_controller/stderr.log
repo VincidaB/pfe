@@ -1,0 +1,7 @@
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:[m[K In lambda function:
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:407:40:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >::_twist_type[m[K’ {aka ‘[01m[Kgeometry_msgs::msg::TwistWithCovariance_<std::allocator<void> >[m[K’}
+  407 |       measured_odom_twist_ = msg->twist[01;31m[K->[m[Ktwist;
+      |                                        [01;31m[K^~[m[K
+gmake[2]: *** [CMakeFiles/skid_drive_controller.dir/build.make:76: CMakeFiles/skid_drive_controller.dir/src/skid_drive_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/skid_drive_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

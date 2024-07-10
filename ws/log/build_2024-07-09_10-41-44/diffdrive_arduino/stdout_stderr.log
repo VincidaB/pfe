@@ -1,0 +1,27 @@
+[35m[1mConsolidate compiler generated dependencies of target diffdrive_arduino[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/diffdrive_arduino.dir/hardware/diffbot_system.cpp.o[0m
+In file included from [01m[K/home/vincent/pfe/ws/src/diffdrive_arduino/hardware/include/diffdrive_arduino/diffbot_system.hpp:34[m[K,
+                 from [01m[K/home/vincent/pfe/ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:15[m[K:
+[01m[K/home/vincent/pfe/ws/src/diffdrive_arduino/hardware/include/diffdrive_arduino/arduino_comms.hpp:[m[K In member function ‘[01m[Kstd::string ArduinoComms::send_msg(const string&, bool)[m[K’:
+[01m[K/home/vincent/pfe/ws/src/diffdrive_arduino/hardware/include/diffdrive_arduino/arduino_comms.hpp:58:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprint_output[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   58 |   std::string send_msg(const std::string &msg_to_send, [01;35m[Kbool print_output = false[m[K)
+      |                                                        [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/vincent/pfe/ws/src/diffdrive_arduino/hardware/include/diffdrive_arduino/arduino_comms.hpp:[m[K In member function ‘[01m[Kvoid ArduinoComms::set_pid_values(int, int, int, int)[m[K’:
+[01m[K/home/vincent/pfe/ws/src/diffdrive_arduino/hardware/include/diffdrive_arduino/arduino_comms.hpp:113:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kss[m[K’
+  113 |     [01;31m[Kss[m[K << "u " << k_p << ":" << k_d << ":" << k_i << ":" << k_o << "\r";
+      |     [01;31m[K^~[m[K
+[01m[K/home/vincent/pfe/ws/src/diffdrive_arduino/hardware/include/diffdrive_arduino/arduino_comms.hpp:109:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kk_p[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  109 |   void set_pid_values([01;35m[Kint k_p[m[K, int k_d, int k_i, int k_o)
+      |                       [01;35m[K~~~~^~~[m[K
+[01m[K/home/vincent/pfe/ws/src/diffdrive_arduino/hardware/include/diffdrive_arduino/arduino_comms.hpp:109:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kk_d[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  109 |   void set_pid_values(int k_p, [01;35m[Kint k_d[m[K, int k_i, int k_o)
+      |                                [01;35m[K~~~~^~~[m[K
+[01m[K/home/vincent/pfe/ws/src/diffdrive_arduino/hardware/include/diffdrive_arduino/arduino_comms.hpp:109:45:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kk_i[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  109 |   void set_pid_values(int k_p, int k_d, [01;35m[Kint k_i[m[K, int k_o)
+      |                                         [01;35m[K~~~~^~~[m[K
+[01m[K/home/vincent/pfe/ws/src/diffdrive_arduino/hardware/include/diffdrive_arduino/arduino_comms.hpp:109:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kk_o[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  109 |   void set_pid_values(int k_p, int k_d, int k_i, [01;35m[Kint k_o[m[K)
+      |                                                  [01;35m[K~~~~^~~[m[K
+gmake[2]: *** [CMakeFiles/diffdrive_arduino.dir/build.make:76: CMakeFiles/diffdrive_arduino.dir/hardware/diffbot_system.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/diffdrive_arduino.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

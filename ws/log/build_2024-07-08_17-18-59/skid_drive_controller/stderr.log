@@ -1,0 +1,11 @@
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:[m[K In member function ‘[01m[Kvirtual controller_interface::CallbackReturn skid_drive_controller::SkidDriveController::on_configure(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/vincent/pfe/ws/src/skid_drive_controller/src/skid_drive_controller.cpp:404:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kodometry_publisher_[m[K’
+  404 |   )
+      |    [01;31m[K^[m[K
+      |    [32m[K;[m[K
+......
+  407 |   [32m[Kodometry_publisher_[m[K = get_node()->create_publisher<nav_msgs::msg::Odometry>(
+      |   [32m[K~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/skid_drive_controller.dir/build.make:76: CMakeFiles/skid_drive_controller.dir/src/skid_drive_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/skid_drive_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

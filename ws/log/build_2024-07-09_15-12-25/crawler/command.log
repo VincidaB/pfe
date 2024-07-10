@@ -1,0 +1,4 @@
+Invoking command in '/home/vincent/pfe/ws/build/crawler': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vincent/pfe/ws/build/crawler -- -j16 -l16
+Invoked command in '/home/vincent/pfe/ws/build/crawler' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vincent/pfe/ws/build/crawler -- -j16 -l16
+Invoking command in '/home/vincent/pfe/ws/build/crawler': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vincent/pfe/ws/build/crawler
+Invoked command in '/home/vincent/pfe/ws/build/crawler' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vincent/pfe/ws/build/crawler

@@ -129,8 +129,7 @@ protected:
   rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr
     velocity_command_unstamped_subscriber_ = nullptr;
 
-  //rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odometry_subscriber_ = nullptr;
-
+  rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odometry_subscriber_ = nullptr;
 
 
   realtime_tools::RealtimeBox<std::shared_ptr<Twist>> received_velocity_msg_ptr_{nullptr};
@@ -158,6 +157,9 @@ protected:
 
   bool reset();
   void halt();
+
+  geometry_msgs::msg::Twist measured_odom_twist_;
+
 };
 }  // namespace skid_drive_controller
 #endif  // SKID_DRIVE_CONTROLLER__SKID_DRIVE_CONTROLLER_HPP_
