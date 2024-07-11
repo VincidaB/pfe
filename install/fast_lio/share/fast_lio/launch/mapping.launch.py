@@ -1,1 +1,0 @@
-/home/vincent/ws_livox/src/FAST_LIO/launch/mapping.launch.py

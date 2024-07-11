@@ -1,1 +1,0 @@
-/home/vincent/ws_livox/src/livox_ros_driver2/msg/CustomMsg.msg
