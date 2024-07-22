@@ -1,8 +1,0 @@
-source;share/crawler/hook/cmake_prefix_path.ps1
-source;share/crawler/hook/cmake_prefix_path.dsv
-source;share/crawler/hook/cmake_prefix_path.sh
-source;share/crawler/local_setup.bash
-source;share/crawler/local_setup.dsv
-source;share/crawler/local_setup.ps1
-source;share/crawler/local_setup.sh
-source;share/crawler/local_setup.zsh

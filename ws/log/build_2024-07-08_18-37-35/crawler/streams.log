@@ -1,4 +1,0 @@
-[0.015s] Invoking command in '/home/vincent/pfe/ws/build/crawler': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/vincent/pfe/ws/crawler -g -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vincent/pfe/ws/install/crawler
-[0.024s] [0mCMake Error: Unknown argument -g[0m
-[0.024s] [0mCMake Error: Run 'cmake --help' for all supported options.[0m
-[0.027s] Invoked command in '/home/vincent/pfe/ws/build/crawler' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/vincent/pfe/ws/crawler -g -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vincent/pfe/ws/install/crawler

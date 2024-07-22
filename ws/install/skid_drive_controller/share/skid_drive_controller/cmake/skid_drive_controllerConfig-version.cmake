@@ -1,1 +1,0 @@
-/home/vincent/pfe/ws/build/skid_drive_controller/ament_cmake_core/skid_drive_controllerConfig-version.cmake
