@@ -12,6 +12,7 @@
         common:
             lid_topic:  "/livox/lidar"
             imu_topic:  "/livox/imu"
+            #imu_topic:  "/imu_plugin/out"
             time_sync_en: false         # ONLY turn on when external time synchronization is really not possible
             time_offset_lidar_to_imu: 0.0 # Time offset between lidar and IMU calibrated by other algorithms, e.g. LI-Init (can be found in README).
                                         # This param will take effect no matter what time_sync_en is. So if the time offset is not known exactly, please set as 0.0
@@ -35,6 +36,11 @@
             extrinsic_R: [ 1., 0., 0.,
                             0., 1., 0.,
                             0., 0., 1.]
+            odometry_angle_offset_w: 0.707
+            odometry_angle_offset_x: 0.
+            odometry_angle_offset_y: 0.
+            odometry_angle_offset_z: -0.707
+
 
         publish:
             path_en: true                # true: publish Path

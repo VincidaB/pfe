@@ -57,11 +57,14 @@
 #include <sensor_msgs/msg/imu.hpp>
 #include <std_srvs/srv/trigger.hpp>
 #include <tf2_ros/transform_broadcaster.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <geometry_msgs/msg/transform_stamped.hpp>
 #include <geometry_msgs/msg/vector3.hpp>
 #include <livox_ros_driver2/msg/custom_msg.hpp>
 #include "preprocess.h"
 #include <ikd-Tree/ikd_Tree.h>
+#include "tf2_ros/static_transform_broadcaster.h"
+
 
 #define INIT_TIME           (0.1)
 #define LASER_POINT_COV     (0.001)
@@ -104,6 +107,12 @@ vector<BoxPointType> cub_needrm;
 vector<PointVector>  Nearest_Points; 
 vector<double>       extrinT(3, 0.0);
 vector<double>       extrinR(9, 0.0);
+
+double odometry_angle_offset_w = 0.0;
+double odometry_angle_offset_x = 0.0;
+double odometry_angle_offset_y = 0.0;
+double odometry_angle_offset_z = 0.0;
+
 deque<double>                     time_buffer;
 deque<PointCloudXYZI::Ptr>        lidar_buffer;
 deque<sensor_msgs::msg::Imu::ConstSharedPtr> imu_buffer;
@@ -628,10 +637,30 @@ void set_posestamp(T & out)
 void publish_odometry(const rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr pubOdomAftMapped, std::unique_ptr<tf2_ros::TransformBroadcaster> & tf_br)
 {
     odomAftMapped.header.frame_id = "camera_init";
-    odomAftMapped.child_frame_id = "body";
+    odomAftMapped.child_frame_id = "odom";
     odomAftMapped.header.stamp = get_ros_time(lidar_end_time);
     set_posestamp(odomAftMapped.pose);
-    pubOdomAftMapped->publish(odomAftMapped);
+   
+    nav_msgs::msg::Odometry modified_msg = odomAftMapped;
+    tf2::Quaternion q;
+    tf2::Quaternion q_rot = tf2::Quaternion(odometry_angle_offset_x,
+                                        odometry_angle_offset_y,
+                                        odometry_angle_offset_z,
+                                        odometry_angle_offset_w);
+    
+    tf2::fromMsg(modified_msg.pose.pose.orientation, q);
+    q = q_rot * q;
+    modified_msg.pose.pose.orientation.x = q.x();
+    modified_msg.pose.pose.orientation.y = q.y();
+    modified_msg.pose.pose.orientation.z = q.z();
+    modified_msg.pose.pose.orientation.w = q.w();
+
+
+    //publication of the actual /Odometry topic
+    pubOdomAftMapped->publish(modified_msg);
+
+
+    //covariance estimation and transformation to the camera_init frame
     auto P = kf.get_P();
     for (int i = 0; i < 6; i ++)
     {
@@ -834,6 +863,11 @@ public:
         this->declare_parameter<vector<double>>("mapping.extrinsic_T", vector<double>());
         this->declare_parameter<vector<double>>("mapping.extrinsic_R", vector<double>());
 
+        this->declare_parameter<double>("mapping.odometry_angle_offset_w", 0.0);
+        this->declare_parameter<double>("mapping.odometry_angle_offset_x", 0.0);
+        this->declare_parameter<double>("mapping.odometry_angle_offset_y", 0.0);
+        this->declare_parameter<double>("mapping.odometry_angle_offset_z", 0.0);
+
         this->get_parameter_or<bool>("publish.path_en", path_en, true);
         this->get_parameter_or<bool>("publish.effect_map_en", effect_pub_en, false);
         this->get_parameter_or<bool>("publish.map_en", map_pub_en, false);
@@ -869,6 +903,12 @@ public:
         this->get_parameter_or<int>("pcd_save.interval", pcd_save_interval, -1);
         this->get_parameter_or<vector<double>>("mapping.extrinsic_T", extrinT, vector<double>());
         this->get_parameter_or<vector<double>>("mapping.extrinsic_R", extrinR, vector<double>());
+        
+        this->get_parameter_or<double>("mapping.odometry_angle_offset_w", odometry_angle_offset_w, 0.0);
+        this->get_parameter_or<double>("mapping.odometry_angle_offset_x", odometry_angle_offset_x, 0.0);
+        this->get_parameter_or<double>("mapping.odometry_angle_offset_y", odometry_angle_offset_y, 0.0);
+        this->get_parameter_or<double>("mapping.odometry_angle_offset_z", odometry_angle_offset_z, 0.0);
+
 
         RCLCPP_INFO(this->get_logger(), "p_pre->lidar_type %d", p_pre->lidar_type);
 
@@ -934,6 +974,27 @@ public:
         pubOdomAftMapped_ = this->create_publisher<nav_msgs::msg::Odometry>("/Odometry", 20);
         pubPath_ = this->create_publisher<nav_msgs::msg::Path>("/path", 20);
         tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
+
+        tf_static_broadcaster_ = std::make_shared<tf2_ros::StaticTransformBroadcaster>(this);
+        geometry_msgs::msg::TransformStamped t;
+
+        t.header.stamp = this->get_clock()->now();
+        t.header.frame_id = "body";
+        t.child_frame_id = "odom";
+
+        t.transform.translation.x = 0.0;
+        t.transform.translation.y = 0.0;
+        t.transform.translation.z = 0.0;
+        tf2::Quaternion q;
+        t.transform.rotation.x = odometry_angle_offset_x;
+        t.transform.rotation.y = odometry_angle_offset_y;
+        t.transform.rotation.z = odometry_angle_offset_z;
+        t.transform.rotation.w = odometry_angle_offset_w;
+
+        tf_static_broadcaster_->sendTransform(t);
+    
+
+
 
         //------------------------------------------------------------------------------------------------------
         auto period_ms = std::chrono::milliseconds(static_cast<int64_t>(1000.0 / 100.0));
@@ -1140,6 +1201,8 @@ private:
     rclcpp::Subscription<livox_ros_driver2::msg::CustomMsg>::SharedPtr sub_pcl_livox_;
 
     std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
+    std::shared_ptr<tf2_ros::StaticTransformBroadcaster> tf_static_broadcaster_;
+
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::TimerBase::SharedPtr map_pub_timer_;
     rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr map_save_srv_;
