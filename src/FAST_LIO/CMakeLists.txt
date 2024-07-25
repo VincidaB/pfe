@@ -17,6 +17,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -pthread -std=c++0x -std=c++14 -fexceptions")
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_THREAD_LIBS_INIT "-lpthread")
 
 message("Current CPU archtecture: ${CMAKE_SYSTEM_PROCESSOR}")
 
@@ -46,6 +47,10 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}   ${OpenMP_C_FLAGS}")
 
 find_package(PythonLibs REQUIRED)
 find_path(MATPLOTLIB_CPP_INCLUDE_DIRS "matplotlibcpp.h")
+
+if(POLICY CMP0074)
+  cmake_policy(SET CMP0074 NEW)
+endif()
 
 # ROS dependencies
 find_package(ament_cmake REQUIRED)
