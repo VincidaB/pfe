@@ -14,7 +14,7 @@
 
 /*
  * Author: Bence Magyar, Enrique Fernández, Manuel Meraz
- */
+*/
 
 #ifndef SKID_DRIVE_CONTROLLER__SKID_DRIVE_CONTROLLER_HPP_
 #define SKID_DRIVE_CONTROLLER__SKID_DRIVE_CONTROLLER_HPP_
@@ -41,9 +41,9 @@
 #include "realtime_tools/realtime_buffer.h"
 #include "realtime_tools/realtime_publisher.h"
 #include "tf2_msgs/msg/tf_message.hpp"
+#include "control_toolbox/pid.hpp"
 
 #include "skid_drive_controller_parameters.hpp"
-
 namespace skid_drive_controller
 {
 class SkidDriveController : public controller_interface::ControllerInterface
@@ -130,6 +130,7 @@ protected:
     velocity_command_unstamped_subscriber_ = nullptr;
 
   rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odometry_subscriber_ = nullptr;
+  rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr twist_subscriber_ = nullptr;
 
 
   realtime_tools::RealtimeBox<std::shared_ptr<Twist>> received_velocity_msg_ptr_{nullptr};
@@ -159,7 +160,9 @@ protected:
   void halt();
 
   geometry_msgs::msg::Twist measured_odom_twist_;
+  control_toolbox::Pid pid;
 
 };
 }  // namespace skid_drive_controller
 #endif  // SKID_DRIVE_CONTROLLER__SKID_DRIVE_CONTROLLER_HPP_
+git 
