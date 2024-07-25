@@ -3,7 +3,10 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <xacro:include filename="inertial_macros.xacro" />
-    <xacro:include filename="$(find ros2_livox_simulation)/urdf/mid360.xacro" />
+    <xacro:if value="$(arg sim_mode)">
+        <xacro:include filename="$(find ros2_livox_simulation)/urdf/mid360.xacro" />
+    </xacro:if>
+    
     <xacro:property name="PI" value="3.1415926"/>
 
 
@@ -284,9 +287,12 @@
         </collision>
     </gazebo>
 
-    <xacro:mid360 name="livox" parent="base_link" topic="livox/lidar">
-        <origin xyz="0 0 0.1" rpy="0 0 -1.57"/>
-    </xacro:mid360>
+
+    <xacro:if value="$(arg sim_mode)">    
+        <xacro:mid360 name="livox" parent="base_link" topic="livox/lidar">
+            <origin xyz="0 0 0.1" rpy="0 0 -1.57"/>
+        </xacro:mid360>
+    </xacro:if>
 
 
   <joint name="imu_joint" type="fixed">
