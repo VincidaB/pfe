@@ -4,6 +4,8 @@
 
     <xacro:include filename="inertial_macros.xacro" />
     <xacro:include filename="$(find ros2_livox_simulation)/urdf/mid360.xacro" />
+    <xacro:property name="PI" value="3.1415926"/>
+
 
     <link name="base_link">
         <inertial>
@@ -17,6 +19,15 @@
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="base_link"/>
         <child link="chassis"/>
+    </joint>
+
+    <link name='base_footprint'>
+    </link>
+
+    <joint name="joint_base_footprint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 -1.57"/>
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
     </joint>
 
 
@@ -274,7 +285,7 @@
     </gazebo>
 
     <xacro:mid360 name="livox" parent="base_link" topic="livox/lidar">
-        <origin xyz="0 0 0.1" rpy="0 0 0"/>
+        <origin xyz="0 0 0.1" rpy="0 0 -1.57"/>
     </xacro:mid360>
 
 
@@ -313,4 +324,15 @@
       <pose>0 0 0 0 0 0</pose>
     </sensor>
   </gazebo>
+
+    <link name="laser_frame">
+        
+    </link>
+
+    <joint name="laser_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="laser_frame"/>
+        <origin xyz="0.1 0 0.1" rpy="0 0 0"/>
+    </joint>
+
 </robot>
