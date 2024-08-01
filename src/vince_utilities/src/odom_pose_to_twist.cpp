@@ -30,11 +30,11 @@ void OdomPoseToTwist::odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg
   double dx = msg->pose.pose.position.x - last_odom_pose.position.x;
   double dy = msg->pose.pose.position.y - last_odom_pose.position.y;
 
-  // get distance along x axis of robot
-  double dx_robot = dx * cos(last_odom_pose.orientation.z) + dy * sin(last_odom_pose.orientation.z);
+  // get distance along y axis of robot
+  double dy_robot = dx * sin(last_odom_pose.orientation.z) + dy * cos(last_odom_pose.orientation.z);
 
   // calculate speed
-  double x_speed = dx_robot / time_diff.seconds();
+  x_speed = (dy_robot / time_diff.seconds() + x_speed )/2;
 
   // publish twist message
   geometry_msgs::msg::Twist twist_msg;

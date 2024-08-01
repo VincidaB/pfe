@@ -24,7 +24,7 @@ class OdomPoseToTwist: public rclcpp::Node
         // last pose received from odom topic and timestamp
         geometry_msgs::msg::Pose last_odom_pose;
         rclcpp::Time last_odom_time;
-
+        double x_speed = 0;
         
 };
 
