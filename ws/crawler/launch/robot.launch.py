@@ -25,7 +25,7 @@ def generate_launch_description():
     # Declare the launch arguments
     # check if log_level is set
 
-    logger = LaunchConfiguration('log_level')  
+    logger = LaunchConfiguration('log_level')
     # if not set, set to debug
     if logger is None:
         logger = 'debug'
@@ -35,7 +35,7 @@ def generate_launch_description():
 
 
     controller_params_file = os.path.join(
-        get_package_share_directory("diffdrive_arduino"),
+        get_package_share_directory("crawler"),
         'config',
         'diffbot_controllers.yaml')
 
@@ -56,7 +56,7 @@ def generate_launch_description():
     )
 
     delayed_controller_manager = TimerAction(
-        period=0.5,
+        period=1.0,
         actions=[controller_manager],
     )
 
@@ -80,7 +80,7 @@ def generate_launch_description():
     )
 
     delayed_joint_broad_spawner = TimerAction(
-        period=1.0,
+        period=2.0,
         actions=[joint_broad_spawner],
     )
 
