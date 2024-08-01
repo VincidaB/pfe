@@ -55,7 +55,7 @@ install(
   DESTINATION share/diffdrive_arduino
 )
 install(
-  DIRECTORY bringup/launch bringup/config
+  DIRECTORY bringup/launch
   DESTINATION share/diffdrive_arduino
 )
 install(TARGETS diffdrive_arduino
