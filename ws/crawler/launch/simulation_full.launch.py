@@ -74,7 +74,10 @@ def generate_launch_description():
     fast_lio = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('fast_lio'),'launch', 'mapping.launch.py')]),
-            launch_arguments={'use_sim_time': "true"}.items()
+            launch_arguments={'use_sim_time': 'true',
+                               'rviz' : 'true',
+                               'rviz_cfg' : os.path.join(get_package_share_directory('crawler'), 'config', 'rviz_nav2_fastlio.rviz'),
+                               }.items()
     )
 
     point_cloud_to_laser_scan = Node(
