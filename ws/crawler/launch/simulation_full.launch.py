@@ -128,7 +128,28 @@ def generate_launch_description():
         arguments=['0.0', '0', '0.0', '0', '0', '0', 'odom', 'camera_init']
     ) 
 
+    slam2D = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('slam_toolbox'),'launch', 'online_async_launch.py')]),
+            launch_arguments={'use_sim_time': 'true', 
+                              'slam_params_file': os.path.join(
+                                get_package_share_directory('crawler'),'config','mapper_params_online_async.yaml'
+                              )}.items(),
+    )
+   
+    nav2_params = os.path.join(get_package_share_directory('crawler'), 'config', 'nav2_params.yaml'),
+    nav2 = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('crawler'),'launch', 'navigation_launch.py')]),
+            launch_arguments={'use_sim_time': 'true',
+                            'params_file': nav2_params,
+                            'container_name': 'nav2_container',}.items(),
+    )
 
+    delayed_nav2 = TimerAction(
+        period = 1.0,
+        actions=[nav2]
+    )
     # Launch them all!
     return LaunchDescription([
         DeclareLaunchArgument(
@@ -145,5 +166,7 @@ def generate_launch_description():
         #map_to_odom,
         #base_to_laser,
         body_to_base_link,
-        #odom_to_base_link
+        #odom_to_base_link,
+        slam2D,
+        delayed_nav2
     ])
