@@ -114,7 +114,9 @@ def generate_launch_description():
     body_to_base_link = Node(
         package='tf2_ros', executable='static_transform_publisher',
         name='static_tf_pub_body_to_odom',
-        arguments=['0.0', '0', '0.0', '1.57', '0.0', '0.0', 'body', 'base_link']
+        arguments=['0.0', '0', '0.0', '0.0', '0.0', '0.0', 'body', 'base_link'],
+        output='screen'
+
     )
 
     odom_to_base_link = Node(
