@@ -98,21 +98,10 @@ def generate_launch_description():
             'use_inf': True,
             'inf_epsilon': 1.0,
         }],
-        name='pointcloud_to_laserscan'
+        name='pointcloud_to_laserscan',
+        output='screen'
     )
 
-
-    map_to_odom = Node(
-        package='tf2_ros', executable='static_transform_publisher',
-        name='static_tf_pub_map_to_odom',
-        arguments=['0.0', '0', '0.0', '0', '0', '0', 'map', 'camera_init']
-    )
-
-    base_to_laser = Node(
-        package='tf2_ros', executable='static_transform_publisher',
-        name='static_tf_pub_base_to_laser',
-        arguments=['0.0', '0', '0.0', '0', '0', '0', 'base_link', 'laser_frame']
-    )
 
     body_to_base_link = Node(
         package='tf2_ros', executable='static_transform_publisher',
@@ -121,12 +110,6 @@ def generate_launch_description():
         output='screen'
 
     )
-
-    odom_to_base_link = Node(
-        package='tf2_ros', executable='static_transform_publisher',
-        name='static_tf_pub_odom_to_base_link',
-        arguments=['0.0', '0', '0.0', '0', '0', '0', 'odom', 'camera_init']
-    ) 
 
     slam2D = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
@@ -163,8 +146,6 @@ def generate_launch_description():
         delayed_skid_drive_spawner,
         fast_lio,
         point_cloud_to_laser_scan,
-        #map_to_odom,
-        #base_to_laser,
         body_to_base_link,
         #odom_to_base_link,
         slam2D,
