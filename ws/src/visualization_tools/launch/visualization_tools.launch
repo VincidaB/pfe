@@ -1,0 +1,24 @@
+<launch>
+
+  <arg name="world_name" default="garage"/>
+
+  <node pkg="visualization_tools" exec="visualizationTools" name="visualizationTools" output="screen">
+    <param name="metricFile" value="$(find-pkg-prefix crawler)/log/metrics" />
+    <param name="trajFile" value="$(find-pkg-prefix crawler)/log/trajectory" />
+    <param name="pcdFile" value="$(find-pkg-prefix crawler)/log/pointcloud" />
+    <param name="mapFile" value="$(find-pkg-prefix crawler)/mesh/scans.ply" />
+    <param name="overallMapVoxelSize" value="0.1" />
+    <param name="exploredAreaVoxelSize" value="0.2" />
+    <param name="exploredVolumeVoxelSize" value="1.0" />
+    <param name="transInterval" value="0.1" />
+    <param name="yawInterval" value="0.17" />
+    <param name="overallMapDisplayInterval" value="2" />
+    <param name="exploredAreaDisplayInterval" value="1" />
+    <param name="savePcd" value="false" />
+    <remap from="state_estimation" to="Odometry"/>
+    <remap from="registered_scan" to="cloud_registered"/>
+  </node>
+
+  <node pkg="visualization_tools" exec="realTimePlot.py" name="realTimePlot" output="screen"/>
+
+</launch>

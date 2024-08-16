@@ -48,7 +48,7 @@ def generate_launch_description():
                                    '-entity', 'crawler',
                                    '-x','0.0',
                                    '-y','0.0',
-                                   '-z', '1.0'
+                                   '-z', '0.1'
                                      ],
                         output='screen')
 
@@ -137,7 +137,9 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument(
             'world',
-            default_value=[os.path.join('worlds', 'empty.world'), ''],
+            #default_value=[os.path.join('worlds', 'empty.world'), ''],
+            #default_value=['/home/vincent/pfe/TwoHouses.xml', ''],
+            default_value=['/home/vincent/pfe/TwoHouses_ramp.xml', ''],
                 description='SDF world file'),
         rsp,
         spawn_entity,
@@ -147,7 +149,6 @@ def generate_launch_description():
         fast_lio,
         point_cloud_to_laser_scan,
         body_to_base_link,
-        #odom_to_base_link,
         slam2D,
-        delayed_nav2
+        #delayed_nav2
     ])

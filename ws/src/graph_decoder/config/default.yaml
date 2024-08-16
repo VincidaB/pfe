@@ -1,0 +1,3 @@
+# Graph Decoder Default Params
+world_frame                             : camera_init
+visual_scale_ratio                      : 0.5
