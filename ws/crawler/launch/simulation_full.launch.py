@@ -133,6 +133,21 @@ def generate_launch_description():
         period = 1.0,
         actions=[nav2]
     )
+
+
+    twistStamper = Node(
+        package='twist_stamper', executable='twist_stamper',
+        name='twist_stamper',
+        output='screen',
+        remappings=[
+            ('cmd_vel_in', 'skid_base_controller/cmd_vel_unstamped'),
+            ('cmd_vel_out', 'skid_base_controller/cmd_vel'),
+
+        ]
+    )
+
+
+
     # Launch them all!
     return LaunchDescription([
         DeclareLaunchArgument(
@@ -150,5 +165,6 @@ def generate_launch_description():
         point_cloud_to_laser_scan,
         body_to_base_link,
         slam2D,
-        #delayed_nav2
+        delayed_nav2,
+        twistStamper
     ])
