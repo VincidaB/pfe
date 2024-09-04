@@ -2,40 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.2.4]
+## [1.1.3] - 2023-03-13
 ### Fixed
-- Optimize framing performance
-
-## [1.2.3]
-### Fixed
-- Optimize framing logic and reduce CPU usage
-- Fixed some known issues
-
-## [1.2.1]
-### Fixed
-- Fix offset time error regarding CustomMsg format message publishment.
-
-## [1.2.0]
-### Added
-- Revise the frame segmentation logic.
-- (Notice!!!) Add Timestamp to each point in Livox pointcloud2 (PointXYZRTLT) format. The PointXYZRTL format has been updated to PointXYZRTLT format. Compatibility needs to be considered.
-### Fixed
-- Improve support for gPTP and GPS synchronizations.
+- Improve performance when running in ROS2 Humble;
 
 --- 
-## [1.1.3]
-### Fixed
-- Improve performance when running in ROS2 Humble.
-
---- 
-## [1.1.2]
+## [1.1.2] - 2023-02-15
 ### Changed
-- Change publish frequency range to [0.5Hz, 10 Hz].
+- Change publish frequency range to [0.5Hz, 10 Hz];
 ### Fixed
-- Fix a high CPU-usage problem.
+- Fix a high CPU-usage problem;
 
 --- 
-## [1.1.1]
+## [1.1.1] - 2023-01-09
 ### Added
 - Offer valid line-number info in the point cloud data of MID-360 Lidar.
 - Enable IMU by default.
@@ -43,7 +22,7 @@ All notable changes to this project will be documented in this file.
 - Update the README slightly.
 
 --- 
-## [1.0.0]
+## [1.0.0] - 2022-12-12
 ### Added
 - Support Mid-360 Lidar.
 - Support for Ubuntu 22.04 ROS2 humble.

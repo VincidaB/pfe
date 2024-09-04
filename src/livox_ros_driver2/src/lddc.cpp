@@ -28,7 +28,6 @@
 
 #include <inttypes.h>
 #include <iostream>
-#include <iomanip>
 #include <math.h>
 #include <stdint.h>
 
@@ -263,7 +262,7 @@ void Lddc::InitPointcloud2MsgHeader(PointCloud2& cloud) {
   cloud.header.frame_id.assign(frame_id_);
   cloud.height = 1;
   cloud.width = 0;
-  cloud.fields.resize(7);
+  cloud.fields.resize(6);
   cloud.fields[0].offset = 0;
   cloud.fields[0].name = "x";
   cloud.fields[0].count = 1;
@@ -288,17 +287,13 @@ void Lddc::InitPointcloud2MsgHeader(PointCloud2& cloud) {
   cloud.fields[5].name = "line";
   cloud.fields[5].count = 1;
   cloud.fields[5].datatype = PointField::UINT8;
-  cloud.fields[6].offset = 18;
-  cloud.fields[6].name = "timestamp";
-  cloud.fields[6].count = 1;
-  cloud.fields[6].datatype = PointField::FLOAT64;
-  cloud.point_step = sizeof(LivoxPointXyzrtlt);
+  cloud.point_step = sizeof(LivoxPointXyzrtl);
 }
 
 void Lddc::InitPointcloud2Msg(const StoragePacket& pkg, PointCloud2& cloud, uint64_t& timestamp) {
   InitPointcloud2MsgHeader(cloud);
 
-  cloud.point_step = sizeof(LivoxPointXyzrtlt);
+  cloud.point_step = sizeof(LivoxPointXyzrtl);
 
   cloud.width = pkg.points_num;
   cloud.row_step = cloud.width * cloud.point_step;
@@ -307,7 +302,7 @@ void Lddc::InitPointcloud2Msg(const StoragePacket& pkg, PointCloud2& cloud, uint
   cloud.is_dense     = true;
 
   if (!pkg.points.empty()) {
-    timestamp = pkg.base_time;
+    timestamp = pkg.base_time + pkg.points[0].offset_time;
   }
 
   #ifdef BUILDING_ROS1
@@ -316,20 +311,20 @@ void Lddc::InitPointcloud2Msg(const StoragePacket& pkg, PointCloud2& cloud, uint
       cloud.header.stamp = rclcpp::Time(timestamp);
   #endif
 
-  std::vector<LivoxPointXyzrtlt> points;
+  std::vector<LivoxPointXyzrtl> points;
   for (size_t i = 0; i < pkg.points_num; ++i) {
-    LivoxPointXyzrtlt point;
+    LivoxPointXyzrtl point;
     point.x = pkg.points[i].x;
     point.y = pkg.points[i].y;
     point.z = pkg.points[i].z;
     point.reflectivity = pkg.points[i].intensity;
     point.tag = pkg.points[i].tag;
     point.line = pkg.points[i].line;
-    point.timestamp = static_cast<double>(pkg.points[i].offset_time);
+
     points.push_back(std::move(point));
   }
-  cloud.data.resize(pkg.points_num * sizeof(LivoxPointXyzrtlt));
-  memcpy(cloud.data.data(), points.data(), pkg.points_num * sizeof(LivoxPointXyzrtlt));
+  cloud.data.resize(pkg.points_num * sizeof(LivoxPointXyzrtl));
+  memcpy(cloud.data.data(), points.data(), pkg.points_num * sizeof(LivoxPointXyzrtl));
 }
 
 void Lddc::PublishPointcloud2Data(const uint8_t index, const uint64_t timestamp, const PointCloud2& cloud) {
@@ -362,7 +357,7 @@ void Lddc::InitCustomMsg(CustomMsg& livox_msg, const StoragePacket& pkg, uint8_t
 
   uint64_t timestamp = 0;
   if (!pkg.points.empty()) {
-    timestamp = pkg.base_time;
+    timestamp = pkg.base_time + pkg.points[0].offset_time;
   }
   livox_msg.timebase = timestamp;
 
@@ -392,7 +387,7 @@ void Lddc::FillPointsToCustomMsg(CustomMsg& livox_msg, const StoragePacket& pkg)
     point.reflectivity = points[i].intensity;
     point.tag = points[i].tag;
     point.line = points[i].line;
-    point.offset_time = static_cast<uint32_t>(points[i].offset_time - pkg.base_time);
+    point.offset_time = static_cast<uint32_t>(points[i].offset_time);
 
     livox_msg.points.push_back(std::move(point));
   }
@@ -423,7 +418,7 @@ void Lddc::InitPclMsg(const StoragePacket& pkg, PointCloud& cloud, uint64_t& tim
   cloud.width = pkg.points_num;
 
   if (!pkg.points.empty()) {
-    timestamp = pkg.base_time;
+    timestamp = pkg.base_time + pkg.points[0].offset_time;
   }
   cloud.header.stamp = timestamp / 1000.0;  // to pcl ros time stamp
 #elif defined BUILDING_ROS2
@@ -490,9 +485,9 @@ void Lddc::InitImuMsg(const ImuData& imu_data, ImuMsg& imu_msg, uint64_t& timest
   imu_msg.angular_velocity.x = imu_data.gyro_x;
   imu_msg.angular_velocity.y = imu_data.gyro_y;
   imu_msg.angular_velocity.z = imu_data.gyro_z;
-  imu_msg.linear_acceleration.x = imu_data.acc_x;
-  imu_msg.linear_acceleration.y = imu_data.acc_y;
-  imu_msg.linear_acceleration.z = imu_data.acc_z;
+  imu_msg.linear_acceleration.x = 9.81 * imu_data.acc_x;
+  imu_msg.linear_acceleration.y = 9.81 * imu_data.acc_y;
+  imu_msg.linear_acceleration.z = 9.81 * imu_data.acc_z;
 }
 
 void Lddc::PublishImuData(LidarImuDataQueue& imu_data_queue, const uint8_t index) {

@@ -36,15 +36,15 @@
             extrinsic_R: [ 1., 0., 0.,
                             0., 1., 0.,
                             0., 0., 1.]
-            odometry_angle_offset_w: 0.707
+            odometry_angle_offset_w: 1.
             odometry_angle_offset_x: 0.
             odometry_angle_offset_y: 0.
-            odometry_angle_offset_z: -0.707
+            odometry_angle_offset_z: 0.
 
 
         publish:
             path_en: true                # true: publish Path
-            effect_map_en: true         # true: publish Effects
+            effect_map_en: false         # true: publish Effects
             map_en: true                 # true: publish Map cloud
             scan_publish_en:  true       # false: close all the point cloud output
             dense_publish_en: true      # false: low down the points number in a global-frame point clouds scan.

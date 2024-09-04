@@ -2,10 +2,6 @@
 
 Livox ROS Driver 2 is the 2nd-generation driver package used to connect LiDAR products produced by Livox, applicable for ROS (noetic recommended) and ROS2 (foxy or humble recommended).
 
-  **Note :**
-
-  As a debugging tool, Livox ROS Driver is not recommended for mass production but limited to test scenarios. You should optimize the code based on the original source to meet your various needs.
-
 ## 1. Preparation
 
 ### 1.1 OS requirements
@@ -41,6 +37,7 @@ Desktop-Full installation is recommend.
 ### 2.1 Clone Livox ROS Driver 2 source code:
 
 ```shell
+cd <ros_ws>/src
 git clone https://github.com/Livox-SDK/livox_ros_driver2.git ws_livox/src/livox_ros_driver2
 ```
 
@@ -56,22 +53,18 @@ git clone https://github.com/Livox-SDK/livox_ros_driver2.git ws_livox/src/livox_
 
 ### 2.3 Build the Livox ROS Driver 2:
 
-#### For ROS (take Noetic as an example):
+#### For ROS1
+
 ```shell
-source /opt/ros/noetic/setup.sh
-./build.sh ROS1
+cd <ros_ws>
+catkin_make # or you can use `catkin build`
 ```
 
-#### For ROS2 Foxy:
-```shell
-source /opt/ros/foxy/setup.sh
-./build.sh ROS2
-```
+#### For ROS2
 
-#### For ROS2 Humble:
 ```shell
-source /opt/ros/humble/setup.sh
-./build.sh humble
+cd <ros_ws>
+colcon build --symlink-install
 ```
 
 ### 2.4 Run Livox ROS Driver 2:
@@ -79,7 +72,8 @@ source /opt/ros/humble/setup.sh
 #### For ROS:
 
 ```shell
-source ../../devel/setup.sh
+cd <ros_ws>
+source ./devel/setup.sh
 roslaunch livox_ros_driver2 [launch file]
 ```
 
@@ -96,7 +90,8 @@ roslaunch livox_ros_driver2 rviz_HAP.launch
 
 #### For ROS2:
 ```shell
-source ../../install/setup.sh
+cd <ros_ws>
+source ./install/setup.sh
 ros2 launch livox_ros_driver2 [launch file]
 ```
 
@@ -133,7 +128,7 @@ All internal parameters of Livox_ros_driver2 are in the launch file. Below are d
 | ------------ | ------------------------------------------------------------ | ------- |
 | publish_freq | Set the frequency of point cloud publish <br>Floating-point data type, recommended values 5.0, 10.0, 20.0, 50.0, etc. The maximum publish frequency is 100.0 Hz.| 10.0    |
 | multi_topic  | If the LiDAR device has an independent topic to publish pointcloud data<br>0 -- All LiDAR devices use the same topic to publish pointcloud data<br>1 -- Each LiDAR device has its own topic to publish point cloud data | 0       |
-| xfer_format  | Set pointcloud format<br>0 -- Livox pointcloud2(PointXYZRTLT) pointcloud format<br>1 -- Livox customized pointcloud format<br>2 -- Standard pointcloud2 (pcl :: PointXYZI) pointcloud format in the PCL library (just for ROS) | 0       |
+| xfer_format  | Set pointcloud format<br>0 -- Livox pointcloud2(PointXYZRTL) pointcloud format<br>1 -- Livox customized pointcloud format<br>2 -- Standard pointcloud2 (pcl :: PointXYZI) pointcloud format in the PCL library (just for ROS) | 0       |
 
   **Note :**
 
@@ -141,42 +136,38 @@ All internal parameters of Livox_ros_driver2 are in the launch file. Below are d
 
 &ensp;&ensp;&ensp;&ensp;***Livox_ros_driver2 pointcloud data detailed description :***
 
-1. Livox pointcloud2 (PointXYZRTLT) point cloud format, as follows :
+1. Livox pointcloud2 (PointXYZRTL) point cloud format, as follows :
 
 ```c
 float32 x               # X axis, unit:m
 float32 y               # Y axis, unit:m
 float32 z               # Z axis, unit:m
 float32 intensity       # the value is reflectivity, 0.0~255.0
-uint8   tag             # livox tag
-uint8   line            # laser number in lidar
-float64 timestamp       # Timestamp of point
+uint8 tag               # livox tag
+uint8 line              # laser number in lidar
 ```
-  **Note :**
-
-  The number of points in the frame may be different, but each point provides a timestamp.
 
 2. Livox customized data package format, as follows :
 
 ```c
-std_msgs/Header header     # ROS standard message header
-uint64          timebase   # The time of first point
-uint32          point_num  # Total number of pointclouds
-uint8           lidar_id   # Lidar device id number
-uint8[3]        rsvd       # Reserved use
-CustomPoint[]   points     # Pointcloud data
+std_msgs/Header header    # ROS standard message header
+uint64 timebase           # The time of first point
+uint32 point_num          # Total number of pointclouds
+uint8  lidar_id           # Lidar device id number
+uint8[3]  rsvd            # Reserved use
+CustomPoint[] points      # Pointcloud data
 ```
 
 &ensp;&ensp;&ensp;&ensp;Customized Point Cloud (CustomPoint) format in the above customized data package :
 
 ```c
-uint32  offset_time     # offset time relative to the base time
+uint32 offset_time      # offset time relative to the base time
 float32 x               # X axis, unit:m
 float32 y               # Y axis, unit:m
 float32 z               # Z axis, unit:m
-uint8   reflectivity    # reflectivity, 0~255
-uint8   tag             # livox tag
-uint8   line            # laser number in lidar
+uint8 reflectivity      # reflectivity, 0~255
+uint8 tag               # livox tag
+uint8 line              # laser number in lidar
 ```
 
 3. The standard pointcloud2 (pcl :: PointXYZI) format in the PCL library (only ROS can publish):
