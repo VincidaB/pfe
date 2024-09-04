@@ -77,7 +77,7 @@ public:
     }
 
     */
-    std::cout << "Sent: " << msg_to_send << " Recv: " << response << std::endl;
+    //std::cout << "Sent: " << msg_to_send << " Recv: " << response << std::endl;
     return response;
   }
 

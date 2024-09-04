@@ -71,6 +71,12 @@ def generate_launch_description():
         actions=[joint_broad_spawner],
     )
 
+    livox_msg = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('livox_ros_driver2'), 'launch_ROS2', 'msg_MID360_launch.py')]),
+            launch_arguments={'use_sim_time': 'false'}.items()
+    )
+
     fast_lio = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('fast_lio'),'launch', 'mapping.launch.py')]),
@@ -87,13 +93,13 @@ def generate_launch_description():
         parameters=[{
             'target_frame': 'laser_frame',
             'transform_tolerance': 0.01,
-            'min_height': 0.0,
+            'min_height': 0.05,
             'max_height': 1.0,
             'angle_min': -3.14159265,  # -M_PI
             'angle_max': 3.14159265,  # M_PI
             'angle_increment': 0.0087,  # M_PI/360.0
             'scan_time': 0.3333,
-            'range_min': 0.45,
+            'range_min': 0.2,
             'range_max': 10.0,
             'use_inf': True,
             'inf_epsilon': 1.0,
@@ -102,6 +108,14 @@ def generate_launch_description():
         output='screen'
     )
 
+
+    map_to_camera_init_link = Node(
+        package='tf2_ros', executable='static_transform_publisher',
+        name='static_tf_pub_body_to_odom',
+        arguments=['0.0', '0', '0.0', '0.0', '0.0', '0.0', 'map', 'camera_init'],
+        output='screen'
+
+    )
 
     body_to_base_link = Node(
         package='tf2_ros', executable='static_transform_publisher',
@@ -139,9 +153,11 @@ def generate_launch_description():
         delayed_controller_manager,
         delayed_joint_broad_spawner,
         delayed_skid_drive_spawner,
+        livox_msg,
         fast_lio,
         point_cloud_to_laser_scan,
         body_to_base_link,
+        map_to_camera_init_link,
         slam2D,
         delayed_nav2
     ])

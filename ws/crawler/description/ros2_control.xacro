@@ -7,14 +7,13 @@
         <ros2_control name="RealRobot" type="system">
             <hardware>
                 <plugin>diffdrive_arduino/DiffDriveArduinoHardware</plugin>
-                <param name="left_wheel_name">joint_center_left_wheel</param>
-                <param name="right_wheel_name">joint_center_right_wheel</param>
+                <param name="left_wheel_names">joint_center_left_wheel</param>
+                <param name="right_wheel_names">joint_center_right_wheel</param>
                 <param name="loop_rate">30</param>
 
                 <param name="device">/dev/ttyACM0</param>
 
-                <param name="device">/dev/pts/6</param>
-                <param name="baud_rate">115200</param>
+                <param name="baud_rate">9600</param>
                 <param name="timeout_ms">1000</param>
                 <param name="enc_counts_per_rev">10</param>
                 <param name="odom_topic_sub">odom</param>
