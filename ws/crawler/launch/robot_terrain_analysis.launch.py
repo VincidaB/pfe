@@ -120,5 +120,7 @@ def generate_launch_description():
         delayed_skid_drive_spawner,
         fast_lio,
         body_to_base_link,
+        delayed_terrain_analysis,
+				delayed_terrain_analysis_ext
         
     ])
