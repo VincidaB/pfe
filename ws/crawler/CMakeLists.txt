@@ -5,7 +5,7 @@ find_package(ament_cmake REQUIRED)
 
 
 install(
-    DIRECTORY description launch meshes config
+    DIRECTORY description launch meshes config cpr_office_gazebo
     DESTINATION share/${PROJECT_NAME}
 )
 
