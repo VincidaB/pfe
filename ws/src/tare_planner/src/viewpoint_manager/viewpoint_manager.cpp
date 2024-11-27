@@ -1243,6 +1243,9 @@ int ViewPointManager::GetViewPointCandidate()
   if (!candidate_indices_.empty())
   {
     kdtree_viewpoint_candidate_->setInputCloud(viewpoint_candidate_cloud_);
+  }else{
+    RCLCPP_WARN_STREAM(rclcpp::get_logger("standalone_logger"),
+      "candidate_indices_ is empty");
   }
 
   if (!viewpoint_in_collision_cloud_->points.empty())
