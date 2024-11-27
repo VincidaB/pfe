@@ -101,7 +101,7 @@ int main(int argc, char** argv)
 
   auto pubBoundary = nh->create_publisher<geometry_msgs::msg::PolygonStamped>("/navigation_boundary", 5);
   geometry_msgs::msg::PolygonStamped boundaryMsgs;
-  boundaryMsgs.header.frame_id = "camera_init";
+  boundaryMsgs.header.frame_id = "map";
 
   // read boundary from file
   if (sendBoundary)

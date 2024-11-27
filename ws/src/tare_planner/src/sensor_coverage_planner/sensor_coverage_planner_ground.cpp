@@ -232,6 +232,7 @@ void SensorCoveragePlanner3D::ReadParameters() {
                       kDirectionNoChangeCounterThr);
   this->get_parameter("kResetWaypointJoystickAxesID",
                       kResetWaypointJoystickAxesID);
+
 }
 
 // PlannerData::PlannerData()
@@ -444,7 +445,7 @@ bool SensorCoveragePlanner3D::initialize() {
       this->create_publisher<nav_msgs::msg::Path>(
           "to_nearest_global_subspace_path", 1);
   local_tsp_path_publisher_ =
-      this->create_publisher<nav_msgs::msg::Path>("tare_local_path", 1);
+      this->create_publisher<nav_msgs::msg::Path>("local_path", 1);
   exploration_path_publisher_ =
       this->create_publisher<nav_msgs::msg::Path>("exploration_path", 1);
   waypoint_pub_ = this->create_publisher<geometry_msgs::msg::PointStamped>(
@@ -644,7 +645,7 @@ void SensorCoveragePlanner3D::JoystickCallback(
 
       // Set waypoint to the current robot position to stop the robot in place
       geometry_msgs::msg::PointStamped waypoint;
-      waypoint.header.frame_id = "camera_init";
+      waypoint.header.frame_id = "map";
       waypoint.header.stamp = this->now();
       waypoint.point.x = robot_position_.x;
       waypoint.point.y = robot_position_.y;
@@ -663,7 +664,7 @@ void SensorCoveragePlanner3D::ResetWaypointCallback(
 
   // Set waypoint to the current robot position to stop the robot in place
   geometry_msgs::msg::PointStamped waypoint;
-  waypoint.header.frame_id = "camera_init";
+  waypoint.header.frame_id = "map";
   waypoint.header.stamp = this->now();
   waypoint.point.x = robot_position_.x;
   waypoint.point.y = robot_position_.y;
@@ -680,7 +681,7 @@ void SensorCoveragePlanner3D::SendInitialWaypoint() {
   double dy = sin(robot_yaw_) * lx + cos(robot_yaw_) * ly;
 
   geometry_msgs::msg::PointStamped waypoint;
-  waypoint.header.frame_id = "camera_init";
+  waypoint.header.frame_id = "map";
   waypoint.header.stamp = this->now();
   waypoint.point.x = robot_position_.x + dx;
   waypoint.point.y = robot_position_.y + dy;
@@ -825,7 +826,7 @@ void SensorCoveragePlanner3D::UpdateGlobalRepresentation() {
       planning_env_->GetPointCloudManagerNeighborCellsOrigin();
   geometry_msgs::msg::PointStamped
       pointcloud_manager_neighbor_cells_origin_point;
-  pointcloud_manager_neighbor_cells_origin_point.header.frame_id = "camera_init";
+  pointcloud_manager_neighbor_cells_origin_point.header.frame_id = "map";
   pointcloud_manager_neighbor_cells_origin_point.header.stamp = this->now();
   pointcloud_manager_neighbor_cells_origin_point.point.x =
       pointcloud_manager_neighbor_cells_origin.x();
@@ -877,7 +878,7 @@ void SensorCoveragePlanner3D::PublishGlobalPlanningVisualization(
     const exploration_path_ns::ExplorationPath &global_path,
     const exploration_path_ns::ExplorationPath &local_path) {
   nav_msgs::msg::Path global_path_full = global_path.GetPath();
-  global_path_full.header.frame_id = "camera_init";
+  global_path_full.header.frame_id = "map";
   global_path_full.header.stamp = this->now();
   global_path_full_publisher_->publish(global_path_full);
   // Get the part that connects with the local path
@@ -929,7 +930,7 @@ void SensorCoveragePlanner3D::PublishGlobalPlanningVisualization(
     last_pose.pose.position.z = local_path.nodes_.back().position_.z();
     global_path_trim.poses.push_back(last_pose);
   }
-  global_path_trim.header.frame_id = "camera_init";
+  global_path_trim.header.frame_id = "map";
   global_path_trim.header.stamp = this->now();
   global_path_publisher_->publish(global_path_trim);
 
@@ -938,7 +939,7 @@ void SensorCoveragePlanner3D::PublishGlobalPlanningVisualization(
   grid_world_->GetMarker(grid_world_marker_->marker_);
   grid_world_marker_->Publish();
   nav_msgs::msg::Path full_path = exploration_path_.GetPath();
-  full_path.header.frame_id = "camera_init";
+  full_path.header.frame_id = "map";
   full_path.header.stamp = this->now();
   // exploration_path_publisher_->publish(full_path);
   exploration_path_.GetVisualizationCloud(exploration_path_cloud_->cloud_);
@@ -966,7 +967,7 @@ void SensorCoveragePlanner3D::PublishLocalPlanningVisualization(
   viewpoint_vis_cloud_->Publish();
   lookahead_point_cloud_->Publish();
   nav_msgs::msg::Path local_tsp_path = local_path.GetPath();
-  local_tsp_path.header.frame_id = "camera_init";
+  local_tsp_path.header.frame_id = "map";
   local_tsp_path.header.stamp = this->now();
   local_tsp_path_publisher_->publish(local_tsp_path);
   local_coverage_planner_->GetSelectedViewPointVisCloud(

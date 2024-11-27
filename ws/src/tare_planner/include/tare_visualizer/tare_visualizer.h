@@ -37,7 +37,7 @@ public:
   void PublishMarkers();
 
 private:
-  const std::string kWorldFrameID = "camera_init";
+  const std::string kWorldFrameID = "map";
   bool kExploringSubspaceMarkerColorGradientAlpha;
   double kExploringSubspaceMarkerColorMaxAlpha;
   std_msgs::msg::ColorRGBA kExploringSubspaceMarkerColor;
