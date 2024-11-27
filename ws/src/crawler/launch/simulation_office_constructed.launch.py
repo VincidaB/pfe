@@ -147,7 +147,15 @@ def generate_launch_description():
         arguments=['frame_id', 'base_link'],
 
     )
+    
 
+
+    delayed_spawner = TimerAction(
+        period=5.0,
+        actions=[
+            spawn_entity,
+        ]
+    )
 
 
     # Launch them all!
@@ -156,10 +164,10 @@ def generate_launch_description():
             'world',
             #default_value=[os.path.join('worlds', 'empty.world'), ''],
             #default_value=['/home/vincent/pfe/TwoHouses.xml', ''],
-            default_value=[os.path.join(get_package_share_directory('crawler'), 'cpr_office_gazebo', 'worlds', 'office_construction.world'), ''],
+            default_value=[os.path.join(get_package_share_directory('crawler'), 'cpr_office_gazebo', 'worlds', 'office_constructed.world'), ''],
                 description='SDF world file'),
         rsp,
-        spawn_entity,
+        delayed_spawner,
         gazebo,
         load_joint_state_broadcaster,
         delayed_skid_drive_spawner,

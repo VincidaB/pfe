@@ -77,6 +77,7 @@ def generate_launch_description():
             launch_arguments={'use_sim_time': 'true',
                                'rviz' : 'true',
                                'rviz_cfg' : os.path.join(get_package_share_directory('crawler'), 'config', 'rviz_nav2_fastlio.rviz'),
+                               'config_file' : 'mid360_simulation.yaml'
                                }.items()
     )
 
@@ -142,7 +143,6 @@ def generate_launch_description():
         remappings=[
             ('cmd_vel_in', 'skid_base_controller/cmd_vel_unstamped'),
             ('cmd_vel_out', 'skid_base_controller/cmd_vel'),
-
         ]
     )
 
