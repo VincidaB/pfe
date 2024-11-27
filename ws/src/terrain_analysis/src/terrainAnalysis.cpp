@@ -171,9 +171,9 @@ void laserCloudHandler(const sensor_msgs::msg::PointCloud2::ConstSharedPtr laser
     if (pointZ - vehicleZ > minRelZ - disRatioZ * dis &&
         pointZ - vehicleZ < maxRelZ + disRatioZ * dis &&
         dis < terrainVoxelSize * (terrainVoxelHalfWidth + 1)) {
-      point.x = pointX;
-      point.y = pointY;
-      point.z = pointZ;
+      //point.x = pointX;
+      //point.y = pointY;
+      //point.z = pointZ;
       point.intensity = laserCloudTime - systemInitTime;
       laserCloudCrop->push_back(point);
     }
@@ -674,7 +674,7 @@ int main(int argc, char **argv) {
       sensor_msgs::msg::PointCloud2 terrainCloud2;
       pcl::toROSMsg(*terrainCloudElev, terrainCloud2);
       terrainCloud2.header.stamp = rclcpp::Time(static_cast<uint64_t>(laserCloudTime * 1e9));
-      terrainCloud2.header.frame_id = "camera_init";
+      terrainCloud2.header.frame_id = "odom";
       pubLaserCloud->publish(terrainCloud2);
     }
 
