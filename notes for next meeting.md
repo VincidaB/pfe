@@ -1,1 +1,0 @@
-The intel realSense I have does NOT have an IMU
