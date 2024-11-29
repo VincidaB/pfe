@@ -889,7 +889,7 @@ int main(int argc, char** argv)
           }
 
           path.header.stamp = rclcpp::Time(static_cast<uint64_t>(odomTime * 1e9));
-          path.header.frame_id = "vehicule";
+          path.header.frame_id = "vehicle";
           pubPath->publish(path);
 
           #if PLOTPATHSET == 1
