@@ -109,10 +109,10 @@ def generate_launch_description():
     )
 
 
-    map_to_camera_init_link = Node(
+    map_to_odom_link = Node(
         package='tf2_ros', executable='static_transform_publisher',
         name='static_tf_pub_body_to_odom',
-        arguments=['0.0', '0', '0.0', '0.0', '0.0', '0.0', 'map', 'camera_init'],
+        arguments=['0.0', '0', '0.0', '0.0', '0.0', '0.0', 'map', 'odom'],
         output='screen'
 
     )
@@ -157,7 +157,7 @@ def generate_launch_description():
         fast_lio,
         point_cloud_to_laser_scan,
         body_to_base_link,
-        map_to_camera_init_link,
+        map_to_odom_link,
         slam2D,
         delayed_nav2
     ])

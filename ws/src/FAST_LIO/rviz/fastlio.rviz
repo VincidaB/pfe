@@ -44,8 +44,6 @@ Visualization Manager:
           Value: true
         body:
           Value: true
-        camera_init:
-          Value: true
         chassis:
           Value: true
         imu:
@@ -60,7 +58,7 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        camera_init:
+        odom:
           body:
             base_link:
               base_footprint:

@@ -81,7 +81,7 @@ struct planning_env_ns::PlanningEnvParameters
 class planning_env_ns::PlanningEnv
 {
 public:
-  PlanningEnv(rclcpp::Node::SharedPtr nh, std::string world_frame_id = "camera_init");
+  PlanningEnv(rclcpp::Node::SharedPtr nh, std::string world_frame_id = "odom");
   ~PlanningEnv() = default;
   double GetPlannerCloudResolution()
   {

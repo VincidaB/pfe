@@ -140,7 +140,7 @@ void GraphDecoder::LoadParmas() {
     const std::string prefix = "graph_decoder.";
 
     // Declare the parameters
-    nh_->declare_parameter("world_frame", "camera_init");
+    nh_->declare_parameter("world_frame", "odom");
     nh_->declare_parameter("visual_scale_ratio", 1.0f);
 
     // Retrieve the parameters

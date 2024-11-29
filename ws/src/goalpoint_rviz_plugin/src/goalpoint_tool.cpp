@@ -37,7 +37,7 @@ void GoalpointTool::updateTopic()
 {
   rclcpp::Node::SharedPtr raw_node =
     context_->getRosNodeAbstraction().lock()->get_raw_node();
-  sub_ = raw_node->template create_subscription<nav_msgs::msg::Odometry>("/camera_init", 5 ,std::bind(&GoalpointTool::odomHandler,this,std::placeholders::_1));
+  sub_ = raw_node->template create_subscription<nav_msgs::msg::Odometry>("/odom", 5 ,std::bind(&GoalpointTool::odomHandler,this,std::placeholders::_1));
   
   pub_ = raw_node->template create_publisher<geometry_msgs::msg::PointStamped>("/goal_point", qos_profile_);
   pub_joy_ = raw_node->template create_publisher<sensor_msgs::msg::Joy>("/joy", qos_profile_);
@@ -79,7 +79,7 @@ void GoalpointTool::onPoseSet(double x, double y, double theta)
   pub_joy_->publish(joy);
 
   geometry_msgs::msg::PointStamped goalpoint;
-  goalpoint.header.frame_id = "camera_init";
+  goalpoint.header.frame_id = "odom";
   goalpoint.header.stamp = joy.header.stamp;
   goalpoint.point.x = x;
   goalpoint.point.y = y;

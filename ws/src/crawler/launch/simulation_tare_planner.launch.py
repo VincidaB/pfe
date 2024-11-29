@@ -1,4 +1,3 @@
-# copyright option3 ensma
 import os
 
 from ament_index_python.packages import get_package_share_directory
@@ -77,8 +76,9 @@ def generate_launch_description():
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('fast_lio'),'launch', 'mapping.launch.py')]),
             launch_arguments={'use_sim_time': 'true',
-                               'rviz' : 'true',
+                               'rviz' : 'false',
                                'rviz_cfg' : os.path.join(get_package_share_directory('crawler'), 'config', 'rviz_nav2_fastlio.rviz'),
+                               'config_file' : 'mid360_simulation.yaml'
                                }.items(),
     )
 
@@ -129,13 +129,13 @@ def generate_launch_description():
    
     terrain_analysis = IncludeLaunchDescription(
         XMLLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('terrain_analysis'),'launch', 'terrain_analysis.launch')]),
+            get_package_share_directory('terrain_analysis'),'launch', 'terrain_analysis_crawler.launch')]),
             launch_arguments={'use_sim_time': 'true'}.items()
     )
 
     terrain_analysis_ext = IncludeLaunchDescription(
         XMLLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('terrain_analysis_ext'),'launch', 'terrain_analysis_ext.launch')]),
+            get_package_share_directory('terrain_analysis_ext'),'launch', 'terrain_analysis_ext_crawler.launch')]),
     )   
 
 
@@ -151,7 +151,7 @@ def generate_launch_description():
 
     local_planner = IncludeLaunchDescription(
         XMLLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('local_planner'),'launch', 'local_planner.launch')]),
+            get_package_share_directory('local_planner'),'launch', 'local_planner_crawler.launch')]),
             launch_arguments={'use_sim_time': 'true'}.items()
     )
 
@@ -168,13 +168,34 @@ def generate_launch_description():
                  ],
     )
 
+    rviz2 = Node(
+        package='rviz2',
+        executable='rviz2',
+        name='rviz2',
+        arguments=['-d', os.path.join(get_package_share_directory('crawler'), 'config', 'rviz_tare.rviz')],
+        output='screen'
+    )
+
+
+    twist_stamper = Node(
+        package='twist_stamper',
+        executable='twist_stamper',
+        name='twist_stamper',
+        output='screen',
+        remappings=[('/cmd_vel_in', '/cmd_vel'),
+                    ('/cmd_vel_out', '/skid_base_controller/cmd_vel')],
+        parameters=[{
+            'frame_id': 'base_link',
+        }]
+    )
+
     # Launch them all!
     return LaunchDescription([
         DeclareLaunchArgument(
             'world',
             #default_value=[os.path.join('worlds', 'empty.world'), ''],
             #default_value=['/home/vincent/pfe/TwoHouses.xml', ''],
-            default_value=['/home/vincent/pfe/TwoHouses_ramp.xml', ''],
+            default_value=[os.path.join(get_package_share_directory('crawler'), 'cpr_office_gazebo', 'worlds', 'office_constructed.world'), ''],
                 description='SDF world file'),
         rsp,
         spawn_entity,
@@ -187,4 +208,6 @@ def generate_launch_description():
         delayed_terrain_analysis,
         delayed_terrain_analysis_ext,
         delayed_planners,
+        twist_stamper
+        #rviz2,
     ])

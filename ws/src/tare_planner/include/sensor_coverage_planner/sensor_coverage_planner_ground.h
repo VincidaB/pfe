@@ -59,7 +59,7 @@
 #define curshome "\033[0;0H"
 
 namespace sensor_coverage_planner_3d_ns {
-const std::string kWorldFrameID = "camera_init";
+const std::string kWorldFrameID = "odom";
 typedef pcl::PointXYZRGBNormal PlannerCloudPointType;
 typedef pcl::PointCloud<PlannerCloudPointType> PlannerCloudType;
 typedef misc_utils_ns::Timer Timer;
