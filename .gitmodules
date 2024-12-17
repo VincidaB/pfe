@@ -2,3 +2,6 @@
 	path = ws/src/pointcloud_to_laserscan
 	url = https://github.com/ros-perception/pointcloud_to_laserscan
 	branch = humble
+[submodule "final-year-project-report"]
+	path = final-year-project-report
+	url = https://github.com/VincidaB/final-year-project-report.git
