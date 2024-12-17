@@ -10,16 +10,19 @@ The repository is organized as follows:
 ### How to build every package 
 ```bash
 cd ws
-rosdep install -i --from-path src -y # install dependencies
+rosdep install -i --from-path src -y -r # install dependencies
 colcon build --symlink-install --parallel-workers 3 --cmake-args -DCMAKE_BUILD_TYPE=Release
 source install/setup.bash
 ```
+When compiling on an ARM device like the Jetson, gazebo packages will not be available, rosdep might throw errors, but it is safe to ignore them. The simulation will of course not work on the Jetson.
+
 To reduce the RAM usage during the build process, you can reduce the number of parallel workers. Compiling with 3 parallel workers works on a system with 16Gb of RAM.
 
 The flag `--symlink-install` is used to create symbolic links to the executables and libraries instead of copying them. This is useful when you are developing the packages and you want to see the changes immediately.
 
 The flag `--cmake-args -DCMAKE_BUILD_TYPE=Release` is used to compile the packages in release mode. This will optimize the code and remove the debug symbols. If this is not used, packages like `tare_planner` will not function correctly on the Jetson as it is single threaded and the debug symbols will slow down the execution.
 
+Additionally, `--packages-ignore ros2_livox_simulation` is needed for compiling on the Jetson. The package only needed for the simulation and will throw errors during compilation on the Jetson.
 
 ### To compile a single package
 
